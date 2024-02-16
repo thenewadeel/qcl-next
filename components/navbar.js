@@ -1,19 +1,14 @@
 import Link from "next/link";
 import ThemeChanger from "./DarkSwitch";
-import Image from "next/image"
+import Image from "next/image";
 import { Disclosure } from "@headlessui/react";
 
 const Navbar = () => {
-  const navigation = [
-    "Product",
-    "Features",
-    "Pricing",
-    "Company",
-    "Blog",
-  ];
+  const navigation = ["Home", "History", "Facilities", "Gallery", "Blog", "Contact Us"];
+  const link_stubs = ["home", "history", "facilities", "gallery", "blog", "contact"];
 
   return (
-    <div className="w-full">
+    <div className="w-full border-4 border-yellow-500 rounded-b-3xl">
       <nav className="container relative flex flex-wrap items-center justify-between p-8 mx-auto lg:justify-between xl:px-0">
         {/* Logo  */}
         <Disclosure>
@@ -23,25 +18,17 @@ const Navbar = () => {
                 <Link href="/">
                   <span className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100">
                     <span>
-                      <Image
-                        src="/img/logo.svg"
-                        alt="N"
-                        width="32"
-                        height="32"
-                        className="w-8"
-                      />
+                      <Image src="/img/qcl.jpg" alt="N" width="32" height="32" className="w-8" />
                     </span>
-                    <span>Nextly</span>
+                    <span>QCL</span>
                   </span>
                 </Link>
 
                 <Disclosure.Button
                   aria-label="Toggle Menu"
-                  className="px-2 py-1 ml-auto text-gray-500 rounded-md lg:hidden hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:text-gray-300 dark:focus:bg-trueGray-700">
-                  <svg
-                    className="w-6 h-6 fill-current"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24">
+                  className="px-2 py-1 ml-auto text-gray-500 rounded-md lg:hidden hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:text-gray-300 dark:focus:bg-trueGray-700"
+                >
+                  <svg className="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     {open && (
                       <path
                         fillRule="evenodd"
@@ -61,12 +48,19 @@ const Navbar = () => {
                 <Disclosure.Panel className="flex flex-wrap w-full my-5 lg:hidden">
                   <>
                     {navigation.map((item, index) => (
-                      <Link key={index} href="/" className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none">
-                          {item}
+                      <Link
+                        key={index}
+                        href={"/#" + link_stubs[index]}
+                        className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none"
+                      >
+                        {item}
                       </Link>
                     ))}
-                    <Link href="/" className="w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 rounded-md lg:ml-5">         
-                        Get Started
+                    <Link
+                      href="/"
+                      className="w-full px-6 py-2 mt-3 text-center text-white bg-red-900 dark:bg-red-950 dark:border-2 dark:border-red-900 dark:text-gray-300 rounded-md lg:ml-5"
+                    >
+                      Become a Member
                     </Link>
                   </>
                 </Disclosure.Panel>
@@ -80,8 +74,11 @@ const Navbar = () => {
           <ul className="items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex">
             {navigation.map((menu, index) => (
               <li className="mr-3 nav__item" key={index}>
-                <Link href="/" className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800">
-                    {menu}
+                <Link
+                  href={"/#" + link_stubs[index]}
+                  className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800"
+                >
+                  {menu}
                 </Link>
               </li>
             ))}
@@ -89,8 +86,11 @@ const Navbar = () => {
         </div>
 
         <div className="hidden mr-3 space-x-4 lg:flex nav__item">
-          <Link href="/" className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5">
-              Get Started
+          <Link
+            href="/"
+            className="px-6 py-2 text-white bg-red-900 dark:bg-red-950 dark:border-2 dark:border-red-900 dark:text-gray-300 rounded-md md:ml-5"
+          >
+            Become a Member
           </Link>
 
           <ThemeChanger />
@@ -98,6 +98,6 @@ const Navbar = () => {
       </nav>
     </div>
   );
-}
+};
 
 export default Navbar;
