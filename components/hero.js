@@ -6,9 +6,9 @@ const Hero = () => {
   return (
     <>
       <Container className="flex flex-wrap ">
-        <div className="scrollStop w-full md:pt-40 shadow-inner h-screen text-center flex flex-col justify-start bg-[url('/img/user3.jpg')] object-cover bg-fixed bg-cover justify-between">
+        <div className="scrollStop w-full md:pt-40 shadow-inner h-screen text-center flex flex-col justify-start bg-[url('/img/bg2.jpg')] object-cover bg-fixed bg-cover justify-between">
           <img
-            src="/img/user2.jpg"
+            src="/img/qcl watermark.png"
             alt=""
             className="shadowfilter self-center rounded-xl rounded-t-full bg-black bg-opacity-40 border-4 border-white hover:bg-opacity-100"
           />

@@ -8,8 +8,8 @@ const Navbar = () => {
   const link_stubs = ["home", "history", "facilities", "gallery", "blog", "contact"];
 
   return (
-    <div className="w-full border-4 border-yellow-500 rounded-b-3xl">
-      <nav className="container relative flex flex-wrap items-center justify-between p-8 mx-auto lg:justify-between xl:px-0">
+    <div className="w-full border-4 border-black bg-blend-saturation bg-gray-900 rounded-b-full sticky top-0">
+      <nav className="container relative flex flex-wrap items-center justify-between p-2 mx-auto lg:justify-between xl:px-0">
         {/* Logo  */}
         <Disclosure>
           {({ open }) => (
