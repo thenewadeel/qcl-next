@@ -5,27 +5,20 @@ import bannerImg from "../public/img/banner.jpg";
 const Banner = () => {
   return (
     <>
-      <Container className="flex flex-wrap h-screen">
-        <div className="flex items-center w-full lg:w-full ">
-          <div
-            className={
-              "bg-[url('../public/img/banner.jpg')] scrollStop w-full md:pt-40 shadow-inner h-screen text-center flex flex-col justify-start  object-cover bg-fixed bg-cover justify-between rounded-xl"
-            }
-            // style={}
-          >
-            <img
-              src="/img/qcl watermark.png"
-              alt=""
-              className="shadowfilter self-center rounded-xl rounded-t-full bg-black bg-opacity-40 border-4 border-white hover:bg-opacity-100"
-            />
-            {/* <div className="max-w-2xl mb-8"></div> */}
-            <div className="text-xl text-center text-gray-900 pb-8">
-              <p className="p-4 text-base md:p-8 md:text-3xl rounded-xl leading-relaxed">
-                <span className="text-black font-bold"> Exceptional Facilities, </span>
-                <span className="text-red-500 font-bold"> Exceptional You! </span>
-              </p>
-              Trusted by <span className="text-red-500">2000+</span> members nationwide
-            </div>
+      <Container className=" flex flex-wrap h-screen bg-[url('../public/img/banner.jpg')] scrollStop object-cover bg-fixed bg-cover rounded-xl w-full">
+        <div className="flex flex-col justify-center items-center w-full lg:w-full ">
+          <img
+            src="/img/qcl watermark.png"
+            alt=""
+            className="shadowfilter self-center rounded-xl rounded-t-full bg-black bg-opacity-40 border-4 border-white hover:bg-opacity-100"
+          />
+          {/* <div className="max-w-2xl mb-8"></div> */}
+          <div className="text-xl text-center text-gray-900 ">
+            <p className="text-base  md:text-3xl rounded-xl leading-relaxed">
+              <span className="text-black font-bold"> Exceptional Facilities, </span>
+              <span className="text-red-500 font-bold"> Exceptional You! </span>
+            </p>
+            Trusted by <span className="text-red-500">2000+</span> members nationwide
           </div>
         </div>
       </Container>
