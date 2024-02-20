@@ -23,20 +23,16 @@ let Splide1 = () => {
   };
 
   return (
-    <Container
-      className="snapItem d:p-20 md:pt-40 shadow-inner rounded-xl
-       border-4 border-yellow-400 text-center flex flex-col justify-start 
-    "
-    >
+    <Container className="shadow-inner rounded-xltext-center flex flex-col justify-start">
       {/* <div className="h-screen"> */}
-      <h2 id="autoplay-example-heading">Autoplay</h2>
-      {console.log("asd", imageList)}
+      {/* <h2 id="autoplay-example-heading">Autoplay</h2>
+      {console.log("asd", imageList)} */}
       <Splide options={options} aria-labelledby="autoplay-example-heading" hasTrack={false}>
         {/* <div style={{ position: "relative" }}> */}
-        <SplideTrack>
+        <SplideTrack className="">
           {imageList.map((slide, index) => (
             <SplideSlide key={slide.default.src}>
-              <img src={slide.default.src} alt="" className="" />
+              <img src={slide.default.src} alt="" className=" rounded-3xl  " />
             </SplideSlide>
           ))}
         </SplideTrack>
