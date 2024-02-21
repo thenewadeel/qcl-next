@@ -1,0 +1,23 @@
+body {
+  /* overflow-y: auto; */
+  /* Enable vertical scrolling */
+  overflow: scroll;
+  scroll-snap-type: y mandatory; /* Enable vertical scroll snapping */
+  /* height: 300px; Set the height of the container */
+}
+
+.snapContainer {
+  /* overflow-y: auto; */
+  /* Enable vertical scrolling */
+  scroll-snap-type: y proximity; /* Enable vertical scroll snapping */
+  /* height: 10vh; */
+  overflow: scroll;
+  /* scroll-snap-points-y: repeat(100vh); */
+  /* height: 300px; Set the height of the container */
+}
+
+.snapItem {
+  scroll-snap-align: start; /* Snap the items to the start of the container */
+  scroll-snap-stop: always;
+  /* height: 100px; Set the height of each item */
+}
