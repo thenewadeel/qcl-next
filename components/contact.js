@@ -34,7 +34,39 @@ const Contact = (props) => {
               <p className="max-w-2xl py-4 text-lg leading-normal text-gray-500 lg:text-xl xl:text-xl dark:text-gray-300">
                 Your feedback is important to us
               </p>
-              form
+              <form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                className="z-10 flex flex-col justify-around rounded-xl text-ellipsis h-full p-4 text-justify text-base text-white relative md:relative md:text-black leading-4 inset-x-0 md:text-2xl md:indent-16 bg-black bg-opacity-80 md:bg-opacity-60 md:shadow-inner"
+              >
+                <div className="flex row p-2 justify-between">
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                    className="mx-4 rounded-md focus:border-opacity-80 border-4 border-red-300 border-opacity-0 text-black"
+                  />
+                </div>
+                <div className="flex row p-2 justify-start">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="eMail address"
+                    className="mx-4 rounded-md focus:border-opacity-80 text-black border-2 border-red-300 border-opacity-0"
+                  />
+                </div>
+                <div className="flex row p-2 justify-start items-center">
+                  <textarea
+                    name="message"
+                    placeholder="Your Message will be directed to Club management"
+                    className="mx-4 rounded-md focus:border-opacity-80 text-black border-2 border-red-300 border-opacity-0"
+                  ></textarea>
+                </div>
+                <button className="bg-red-300 hover:bg-red-600 font-bold hover:text-white hover:shadow-md transition-all rounded-xl p-4 px-6 m-4 text-black text-xl self-stretch">
+                  Submit
+                </button>
+              </form>
             </div>
           </div>
         </div>
