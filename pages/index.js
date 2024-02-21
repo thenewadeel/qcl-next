@@ -9,18 +9,21 @@ import SectionTitle from "../components/sectionTitle";
 import { benefitOne, benefitTwo } from "../components/data";
 import Video from "../components/video";
 import Benefits from "../components/benefits";
+import Contact from "../components/contact";
 import Footer from "../components/footer";
 import Testimonials from "../components/testimonials";
 import Cta from "../components/cta";
 import Faq from "../components/faq";
 import PopupWidget from "../components/popupWidget";
 
+import contactImage from "../public/img/contact.jpg";
+
 const Home = () => {
   return (
     <>
       <Head>
-        <title>Nextly - Free Nextjs & TailwindCSS Landing Page Template</title>
-        <meta name="description" content="Nextly is a free landing page template built with next.js & Tailwind CSS" />
+        <title>Quetta Club Limited</title>
+        <meta name="description" content="Quetta Club Limited" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
@@ -50,6 +53,27 @@ const Home = () => {
       </SectionTitle>
       <Faq />
       <Cta />
+      <Contact
+        data={{
+          title: "ASD",
+          description: "DDD",
+          image: contactImage,
+          bullets: [
+            {
+              title: "Understand your customers",
+              desc: "Then explain the first point breifly in one or two lines.",
+            },
+            {
+              title: "Improve acquisition",
+              desc: "Here you can add the next benefit point.",
+            },
+            {
+              title: "Drive customer retention",
+              desc: "This will be your last bullet point in this section.",
+            },
+          ],
+        }}
+      />
       <Footer />
       {/* <PopupWidget /> */}
     </>
