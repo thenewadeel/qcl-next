@@ -6,7 +6,12 @@ const History = () => {
   return (
     <>
       <Container className="h-screen scrollStop d:p-20 md:pt-40 shadow-inner bg-[url('../public/img/club-pics/club_image_12.JPG')] object-cover bg-fixed bg-cover rounded-xl">
-        <div data-aos="fade-up" id="#history" className="flex flex-col items-center w-full justify-between h-full p-8">
+        <div
+          name="history"
+          data-aos="fade-up"
+          id="#history"
+          className="flex flex-col items-center w-full justify-between h-full p-8"
+        >
           <h1 className=" text-2xl md:text-6xl font-bold text-red-900 w-max rounded-3xl p-4 md:hover:text-black bg-black bg-opacity-0 md:hover:bg-opacity-20 shadow-2xl transition-all duration-1000">
             Club History
           </h1>
