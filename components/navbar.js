@@ -57,7 +57,7 @@ const Navbar = () => {
                       </Link>
                     ))}
                     <Link
-                      href="/"
+                      href="/join"
                       className="w-full p-2 mt-3 text-center text-white bg-red-900 border-2 dark:border-white dark:text-gray-300 rounded-lg lg:ml-5"
                     >
                       Become a Member
@@ -87,7 +87,7 @@ const Navbar = () => {
 
         <div className="hidden mr-3 space-x-4 lg:flex nav__item">
           <Link
-            href="/"
+            href="/join"
             className="px-6 py-2 text-white bg-red-900 dark:bg-red-950 dark:border-2 dark:border-gray-300 dark:text-gray-300 rounded-md md:ml-5"
           >
             Become a Member
