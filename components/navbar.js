@@ -8,7 +8,7 @@ const Navbar = () => {
   const link_stubs = ["home", "history", "facilities", "gallery", "blog", "contact"];
 
   return (
-    <div className="w-full border-4 border-black bg-blend-saturation dark:bg-gray-900 rounded-b-full sticky top-0">
+    <div className="w-full  bg-blend-saturation bg-white dark:bg-red-950 rounded-b-3xl fixed  top-0 z-50 dark:shadow-red-950 shadow-gray-700 shadow-md">
       <nav className="container relative flex flex-wrap items-center justify-between p-2 mx-auto lg:justify-between xl:px-0">
         {/* Logo  */}
         <Disclosure>
@@ -45,20 +45,20 @@ const Navbar = () => {
                   </svg>
                 </Disclosure.Button>
 
-                <Disclosure.Panel className="flex flex-wrap w-full my-5 lg:hidden">
+                <Disclosure.Panel className="flex flex-wrap w-full my-5 lg:hidden p-2 m-4">
                   <>
                     {navigation.map((item, index) => (
                       <Link
                         key={index}
                         href={"/#" + link_stubs[index]}
-                        className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-red-500  focus:text-red-500 focus:bg-red-100 dark:focus:bg-gray-800 focus:outline-none"
+                        className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-red-500  focus:text-red-500 focus:bg-red-100 dark:focus:bg-red-800 focus:outline-none dark:focus:text-yellow-500 focus:font-bold"
                       >
                         {item}
                       </Link>
                     ))}
                     <Link
                       href="/"
-                      className="w-full px-6 py-2 mt-3 text-center text-white bg-red-900 dark:bg-red-950 dark:border-2 dark:border-red-900 dark:text-gray-300 rounded-md lg:ml-5"
+                      className="w-full p-2 mt-3 text-center text-white bg-red-900 border-2 dark:border-white dark:text-gray-300 rounded-lg lg:ml-5"
                     >
                       Become a Member
                     </Link>
@@ -76,7 +76,7 @@ const Navbar = () => {
               <li className="mr-3 nav__item" key={index}>
                 <Link
                   href={"/#" + link_stubs[index]}
-                  className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-red-900 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800"
+                  className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-red-900 focus:text-red-900 focus:font-bold focus:bg-red-100 focus:outline-none dark:focus:bg-red-800 dark:focus:font-bold"
                 >
                   {menu}
                 </Link>
@@ -88,7 +88,7 @@ const Navbar = () => {
         <div className="hidden mr-3 space-x-4 lg:flex nav__item">
           <Link
             href="/"
-            className="px-6 py-2 text-white bg-red-900 dark:bg-red-950 dark:border-2 dark:border-red-900 dark:text-gray-300 rounded-md md:ml-5"
+            className="px-6 py-2 text-white bg-red-900 dark:bg-red-950 dark:border-2 dark:border-gray-300 dark:text-gray-300 rounded-md md:ml-5"
           >
             Become a Member
           </Link>
