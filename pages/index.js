@@ -6,18 +6,22 @@ import Splide1 from "../components/splide1";
 import SplideCarousal from "../components/splideCarousel";
 import Navbar from "../components/navbar";
 import SectionTitle from "../components/sectionTitle";
+import Facilities from "../components/facilities";
+import Contact from "../components/contact";
 
 import { benefitOne, benefitTwo } from "../components/data";
 import Video from "../components/video";
 import Benefits from "../components/benefits";
-import Contact from "../components/contact";
+import Contact2 from "../components/contact copy";
 import Footer from "../components/footer";
 import Testimonials from "../components/testimonials";
 import Cta from "../components/cta";
 import Faq from "../components/faq";
 import PopupWidget from "../components/popupWidget";
+import SplideContent from "../components/splideContent";
 
 import contactImage from "../public/img/contact.jpg";
+import SplideContentOver from "../components/splideContentOver";
 
 const Home = () => {
   return (
@@ -31,6 +35,7 @@ const Home = () => {
       <Banner />
       <hr />
       <History />
+      <Facilities />
       <SplideCarousal />
       <SectionTitle pretitle="Nextly Benefits" title=" Why should you use this landing page">
         Nextly is a free landing page & marketing website template for startups and indie projects. Its built with
@@ -54,7 +59,8 @@ const Home = () => {
       </SectionTitle>
       <Faq />
       <Cta />
-      <Contact
+      <Contact />
+      <Contact2
         data={{
           title: "ASD",
           description: "DDD",
@@ -75,6 +81,8 @@ const Home = () => {
           ],
         }}
       />
+      <SplideContent />
+      <SplideContentOver />
       <Footer />
       {/* <PopupWidget /> */}
     </>

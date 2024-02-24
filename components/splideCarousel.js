@@ -28,12 +28,12 @@ let SplideCarousal = () => {
     perPage: 3,
     focus: "center",
     autoplay: true,
-    interval: 3000,
+    interval: 1500,
     flickMaxPages: 3,
     updateOnMove: true,
     pagination: false,
     padding: "0%",
-    throttle: 300,
+    // throttle: 3,
     breakpoints: {
       1080: {
         perPage: 1,
