@@ -8,7 +8,11 @@ const Card = (props) => {
   return (
     <>
       {/* <div className="max-md:max-w-lg mx-auto border-4 border-black flex flex-col "> */}
-      <div className="text-left bg-slate-200 dark:bg-slate-700 rounded-md p-6 flex flex-col justify-between shadow-black hover:shadow-md">
+      <div
+        className={`text-left bg-slate-200 dark:bg-slate-700 rounded-md p-6 flex flex-col justify-between shadow-black hover:shadow-md ${
+          props.className ? props.className : ""
+        }`}
+      >
         <div className="space-y-4 ">
           <h3 className="text-2xl font-semibold ">{data.heading ? data.heading : "111"}</h3>
           <p className="text-gray-800 dark:text-gray-200 text-sm ">{data.text ? data.text : "qqqqqqqqqqqq"}</p>
