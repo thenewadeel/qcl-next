@@ -7,43 +7,43 @@ const Join = (props) => {
   return (
     <>
       <Container className=" ">
-        <div class=" text-gray-800 bg-white flex items-center mx-auto  p-4 border-4 border-black">
-          <div class="grid md:grid-cols-3 items-center shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-xl h-full overflow-hidden border-4 border-black">
-            <div class="max-md:order-1 flex flex-col justify-center space-y-16 max-md:mt-16 min-h-full bg-gradient-to-r from-gray-900 to-gray-700 lg:px-8 px-4 py-4 border-4 border-red-900">
+        <div className=" text-gray-800 bg-white flex items-center mx-auto  p-4 border-4 border-black">
+          <div className="grid md:grid-cols-3 items-center shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-xl h-full overflow-hidden border-4 border-black">
+            <div className="max-md:order-1 flex flex-col justify-center space-y-16 max-md:mt-16 min-h-full bg-gradient-to-r from-gray-900 to-gray-700 lg:px-8 px-4 py-4 border-4 border-red-900">
               <div>
-                <h4 class="text-white text-lg font-semibold">Create Your Account</h4>
-                <p class="text-[13px] text-white mt-2">
+                <h4 className="text-white text-lg font-semibold">Create Your Account</h4>
+                <p className="text-[13px] text-white mt-2">
                   Welcome to our registration page! Get started by creating your account.
                 </p>
               </div>
               <div>
-                <h4 class="text-white text-lg font-semibold">Simple & Secure Registration</h4>
-                <p class="text-[13px] text-white mt-2">
+                <h4 className="text-white text-lg font-semibold">Simple & Secure Registration</h4>
+                <p className="text-[13px] text-white mt-2">
                   Our registration process is designed to be straightforward and secure. We prioritize your privacy and
                   data security.
                 </p>
               </div>
             </div>
-            <form class="md:col-span-2 w-full py-6 px-6 sm:px-16">
-              <div class="mb-6">
-                <h3 class="text-2xl font-bold">Create an account</h3>
+            <form className="md:col-span-2 w-full py-6 px-6 sm:px-16">
+              <div className="mb-6">
+                <h3 className="text-2xl font-bold">Create an account</h3>
               </div>
-              <div class="space-y-5">
+              <div className="space-y-5">
                 <div>
-                  <label class="text-sm mb-2 block">Name</label>
-                  <div class="relative flex items-center">
+                  <label className="text-sm mb-2 block">Name</label>
+                  <div className="relative flex items-center">
                     <input
                       name="name"
                       type="text"
                       required
-                      class="bg-white border border-gray-300 w-full text-sm px-4 py-2.5 rounded-md outline-blue-500"
+                      className="bg-white border border-gray-300 w-full text-sm px-4 py-2.5 rounded-md outline-blue-500"
                       placeholder="Enter name"
                     />
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="#bbb"
                       stroke="#bbb"
-                      class="w-4 h-4 absolute right-4"
+                      className="w-4 h-4 absolute right-4"
                       viewBox="0 0 24 24"
                     >
                       <circle cx="10" cy="7" r="6" data-original="#000000"></circle>
@@ -55,20 +55,20 @@ const Join = (props) => {
                   </div>
                 </div>
                 <div>
-                  <label class="text-sm mb-2 block">Email Id</label>
-                  <div class="relative flex items-center">
+                  <label className="text-sm mb-2 block">Email Id</label>
+                  <div className="relative flex items-center">
                     <input
                       name="email"
                       type="email"
                       required
-                      class="bg-white border border-gray-300 w-full text-sm px-4 py-2.5 rounded-md outline-blue-500"
+                      className="bg-white border border-gray-300 w-full text-sm px-4 py-2.5 rounded-md outline-blue-500"
                       placeholder="Enter email"
                     />
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="#bbb"
                       stroke="#bbb"
-                      class="w-4 h-4 absolute right-4"
+                      className="w-4 h-4 absolute right-4"
                       viewBox="0 0 682.667 682.667"
                     >
                       <defs>
@@ -76,11 +76,11 @@ const Join = (props) => {
                           <path d="M0 512h512V0H0Z" data-original="#000000"></path>
                         </clipPath>
                       </defs>
-                      <g clip-path="url(#a)" transform="matrix(1.33 0 0 -1.33 0 682.667)">
+                      <g clipPath="url(#a)" transform="matrix(1.33 0 0 -1.33 0 682.667)">
                         <path
                           fill="none"
-                          stroke-miterlimit="10"
-                          stroke-width="40"
+                          strokeMiterlimit="10"
+                          strokeWidth="40"
                           d="M452 444H60c-22.091 0-40-17.909-40-40v-39.446l212.127-157.782c14.17-10.54 33.576-10.54 47.746 0L492 364.554V404c0 22.091-17.909 40-40 40Z"
                           data-original="#000000"
                         ></path>
@@ -93,20 +93,20 @@ const Join = (props) => {
                   </div>
                 </div>
                 <div>
-                  <label class="text-sm mb-2 block">Password</label>
-                  <div class="relative flex items-center">
+                  <label className="text-sm mb-2 block">Password</label>
+                  <div className="relative flex items-center">
                     <input
                       name="password"
                       type="password"
                       required
-                      class="bg-white border border-gray-300 w-full text-sm px-4 py-2.5 rounded-md outline-blue-500"
+                      className="bg-white border border-gray-300 w-full text-sm px-4 py-2.5 rounded-md outline-blue-500"
                       placeholder="Enter password"
                     />
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="#bbb"
                       stroke="#bbb"
-                      class="w-4 h-4 absolute right-4 cursor-pointer"
+                      className="w-4 h-4 absolute right-4 cursor-pointer"
                       viewBox="0 0 128 128"
                     >
                       <path
@@ -116,32 +116,32 @@ const Join = (props) => {
                     </svg>
                   </div>
                 </div>
-                <div class="flex items-center">
+                <div className="flex items-center">
                   <input
                     id="remember-me"
                     name="remember-me"
                     type="checkbox"
-                    class="h-4 w-4 shrink-0 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                    className="h-4 w-4 shrink-0 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
                   />
-                  <label for="remember-me" class="ml-3 block text-sm">
+                  <label for="remember-me" className="ml-3 block text-sm">
                     I accept the{" "}
-                    <a href="javascript:void(0);" class="text-blue-600 font-semibold hover:underline ml-1">
+                    <a href="javascript:void(0);" className="text-blue-600 font-semibold hover:underline ml-1">
                       Terms and Conditions
                     </a>
                   </label>
                 </div>
               </div>
-              <div class="!mt-10">
+              <div className="!mt-10">
                 <button
                   type="button"
-                  class="w-full py-3 px-4 text-sm font-semibold rounded text-white bg-gray-700 hover:bg-gray-800 focus:outline-none"
+                  className="w-full py-3 px-4 text-sm font-semibold rounded text-white bg-gray-700 hover:bg-gray-800 focus:outline-none"
                 >
                   Create an account
                 </button>
               </div>
-              <p class="text-sm mt-6 text-center">
+              <p className="text-sm mt-6 text-center">
                 Already have an account?{" "}
-                <a href="javascript:void(0);" class="text-blue-600 font-semibold hover:underline ml-1">
+                <a href="javascript:void(0);" className="text-blue-600 font-semibold hover:underline ml-1">
                   Login here
                 </a>
               </p>

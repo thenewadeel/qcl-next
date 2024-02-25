@@ -54,7 +54,7 @@ const Facilities = () => {
             </div>
             <div className="grid md:grid-cols-2 gap-4 max-md:max-w-lg mx-auto">
               {facilitiesData.map((item, index) => (
-                <Card data={item} />
+                <Card data={item} key={index} />
               ))}
             </div>
           </div>

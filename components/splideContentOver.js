@@ -44,15 +44,15 @@ let SplideContentOver = () => {
 
   return (
     <Container className="shadow-inner text-center flex flex-wrap justify-start rounded-xl text-gray-200 bg-gray-100 dark:bg-slate-800 dark:text-gray-200 border-4 border-red-900 ">
-      <div class=" max-lg:max-w-2xl mx-auto ">
-        <div class="text-left absolute z-10 p-8 shadow-black dark:shadow-sky-900 dark:border-4 dark:border-gray-900 shadow-lg rounded-xl  w-3/5 md:m-24 m-10  backdrop-blur-md bg-stone-950 bg-opacity-70">
-          <h2 class=" font-extrabold mb-6 ">Welcome to Our Website</h2>
-          <p class="mb-4 text-sm">
+      <div className=" max-lg:max-w-2xl mx-auto ">
+        <div className="text-left absolute z-10 p-8 shadow-black dark:shadow-sky-900 dark:border-4 dark:border-gray-900 shadow-lg rounded-xl  w-3/5 md:m-24 m-10  backdrop-blur-md bg-stone-950 bg-opacity-70">
+          <h2 className=" font-extrabold mb-6 ">Welcome to Our Website</h2>
+          <p className="mb-4 text-sm">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquam, ipsum vel iaculis bibendum, justo
             turpis ullamcorper mauris, non aliquam nisi purus vel nisl. Integer efficitur turpis in bibendum tincidunt.
           </p>
         </div>
-        <div class="flex justify-center items-center  ">
+        <div className="flex justify-center items-center  ">
           <Splide options={options} aria-labelledby="autoplay-example-heading" hasTrack={false}>
             <SplideTrack className="">
               {imageList.map((slide, index) => (

@@ -17,7 +17,7 @@ const Contact = (props) => {
               Have a specific inquiry or looking to explore new opportunities? Our experienced team is ready to engage
               with you.
             </p>
-            <form netlify>
+            <form netlify="true">
               <div className="space-y-4 mt-8 ">
                 <input
                   type="text"
@@ -61,9 +61,9 @@ const Contact = (props) => {
                   viewBox="0 0 548.244 548.244"
                 >
                   <path
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     d="M392.19 156.054 211.268 281.667 22.032 218.58C8.823 214.168-.076 201.775 0 187.852c.077-13.923 9.078-26.24 22.338-30.498L506.15 1.549c11.5-3.697 24.123-.663 32.666 7.88 8.542 8.543 11.577 21.165 7.879 32.666L390.89 525.906c-4.258 13.26-16.575 22.261-30.498 22.338-13.923.076-26.316-8.823-30.728-22.032l-63.393-190.153z"
-                    clip-rule="evenodd"
+                    clipRule="evenodd"
                     data-original="#000000"
                   />
                 </svg>
@@ -84,7 +84,7 @@ const Contact = (props) => {
                     data-original="#000000"
                   />
                 </svg>
-                <a href="javascript:void(0)" className="text-current text-sm ml-3">
+                <a href="null" className="text-current text-sm ml-3">
                   <strong>info@quettaclub.org</strong>
                 </a>
               </li>
@@ -101,7 +101,7 @@ const Contact = (props) => {
                     data-original="#000000"
                   ></path>
                 </svg>
-                <a href="javascript:void(0)" className="text-current text-sm ml-3">
+                <a href="null" className="text-current text-sm ml-3">
                   <strong>+92 (333) 1234567</strong>
                 </a>
               </li>
@@ -111,8 +111,8 @@ const Contact = (props) => {
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3448.0986337238387!2d67.0330896!3d30.2057322!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ed2de51c5020c55%3A0x78c544f5c63c4e3e!2sQuetta%20Club%20Limited!5e0!3m2!1sen!2s!4v1707723788558!5m2!1sen!2s"
               className="left-0 top-0 h-full w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg"
-              frameborder="0"
-              allowfullscreen
+              frameBorder="0"
+              allowFullScreen
             ></iframe>
           </div>
         </div>

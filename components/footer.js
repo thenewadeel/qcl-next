@@ -17,7 +17,7 @@ export default function Footer() {
           <p className="text-sm mt-8 dark:text-gray-400">
             A Legacy of Luxury and Distinction. Immerse yourself in an exclusive world of opulence, where prestigious
             facilities meet refined experiences.
-            {/* <a href="javascript:void(0)" className="text-sm font-semibold text-blue-500">
+            {/* <a href="null" className="text-sm font-semibold text-blue-500">
               Read more...
             </a> */}
           </p>
@@ -31,9 +31,9 @@ export default function Footer() {
                   viewBox="0 0 24 24"
                 >
                   <path
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h7v-7h-2v-3h2V8.5A3.5 3.5 0 0 1 15.5 5H18v3h-2a1 1 0 0 0-1 1v2h3v3h-3v7h4a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"
-                    clip-rule="evenodd"
+                    clipRule="evenodd"
                   />
                 </svg>
               </a>
@@ -87,7 +87,7 @@ export default function Footer() {
                 />
               </svg>
             </div>
-            <a href="javascript:void(0)" className="dark:text-gray-300 text-sm ml-3">
+            <a href="null" className="dark:text-gray-300 text-sm ml-3">
               <small className="block">Tel</small>
               <strong>(081) 2822847</strong>
             </a>
@@ -108,7 +108,7 @@ export default function Footer() {
                 />
               </svg>
             </div>
-            <a href="javascript:void(0)" className="dark:text-gray-300 text-sm ml-3">
+            <a href="null" className="dark:text-gray-300 text-sm ml-3">
               <small className="block">Mail</small>
               <strong>info@quettaclub.org</strong>
             </a>
@@ -133,7 +133,7 @@ export default function Footer() {
                 />
               </svg>
             </div>
-            <a href="javascript:void(0)" className="dark:text-gray-300 text-sm ml-3">
+            <a href="null" className="dark:text-gray-300 text-sm ml-3">
               <small className="block">Address</small>
               <strong>Club Road, Quetta, Balochistan</strong>
             </a>
@@ -143,17 +143,17 @@ export default function Footer() {
         <div className="md:flex md:item-center">
           <ul className="flex flex-wrap gap-4">
             <li className="text-sm">
-              <a href="javascript:void(0)" className="dark:text-gray-300 font-semibold hover:underline">
+              <a href="null" className="dark:text-gray-300 font-semibold hover:underline">
                 Terms of Service
               </a>
             </li>
             <li className="text-sm">
-              <a href="javascript:void(0)" className="dark:text-gray-300 font-semibold hover:underline">
+              <a href="null" className="dark:text-gray-300 font-semibold hover:underline">
                 Privacy Policy
               </a>
             </li>
             <li className="text-sm">
-              <a href="javascript:void(0)" className="dark:text-gray-300 font-semibold hover:underline">
+              <a href="null" className="dark:text-gray-300 font-semibold hover:underline">
                 Security
               </a>
             </li>

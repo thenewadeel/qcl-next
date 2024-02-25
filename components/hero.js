@@ -32,7 +32,7 @@ const Hero = () => {
               </a>
             </div>
           </div>
-          <p class="p-4 text-base md:p-8 md:text-3xl rounded-xl leading-relaxed">
+          <p className="p-4 text-base md:p-8 md:text-3xl rounded-xl leading-relaxed">
             <span className="text-black font-bold"> Exceptional Facilities, </span>
             <span className="text-red-500 font-bold"> Exceptional You! </span>
           </p>
