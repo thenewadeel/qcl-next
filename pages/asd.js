@@ -17,19 +17,19 @@ import Faq from "../components/faq";
 import PopupWidget from "../components/popupWidget";
 
 import contactImage from "../public/img/contact.jpg";
-// import addData from "@/firebase/firestore/addData";
-import addData from "./_firebaseFuncs";
-const handleForm = async () => {
-  const data = {
-    name: "John snow",
-    house: "Stark",
-  };
-  const { result, error } = await addData("users", "user-id", data);
-  console.log(result);
-  if (error) {
-    return console.log(error);
-  }
-};
+// // import addData from "@/firebase/firestore/addData";
+// import addData from "./_firebaseFuncs";
+// const handleForm = async () => {
+//   const data = {
+//     name: "John snow",
+//     house: "Stark",
+//   };
+//   const { result, error } = await addData("users", "user-id", data);
+//   console.log(result);
+//   if (error) {
+//     return console.log(error);
+//   }
+// };
 
 const Home = () => {
   return (
@@ -39,7 +39,7 @@ const Home = () => {
         <meta name="description" content="Quetta Club Limited" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {console.log(handleForm())}
+      {/* {console.log(handleForm())} */}
       <Navbar />
       {/* <Banner /> */}
       <hr />
