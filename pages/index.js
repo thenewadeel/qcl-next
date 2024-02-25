@@ -62,30 +62,10 @@ const Home = () => {
       <Faq />
       <Cta />
       <Contact />
-      <Contact2
-        data={{
-          title: "ASD",
-          description: "DDD",
-          image: contactImage,
-          bullets: [
-            {
-              title: "Understand your customers",
-              desc: "Then explain the first point breifly in one or two lines.",
-            },
-            {
-              title: "Improve acquisition",
-              desc: "Here you can add the next benefit point.",
-            },
-            {
-              title: "Drive customer retention",
-              desc: "This will be your last bullet point in this section.",
-            },
-          ],
-        }}
-      />
-      <SplideContent />
+
+      {/* <SplideContent />
       <SplideContentOver />
-      <SplideContentCarousal />
+      <SplideContentCarousal /> */}
       <CtaBanner />
       <Footer />
       {/* <PopupWidget /> */}
