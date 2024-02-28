@@ -2,7 +2,9 @@ import Image from "next/image";
 import Container from "./container";
 import bannerImg from "../public/img/banner.jpg";
 
-const Banner = () => {
+const Banner = (props) => {
+  const { data } = props;
+
   return (
     <>
       <Container className=" flex flex-wrap h-screen bg-[url('../public/img/banner.jpg')] scrollStop object-cover bg-fixed bg-cover rounded-xl w-full">
@@ -15,7 +17,7 @@ const Banner = () => {
           {/* <div className="max-w-2xl mb-8"></div> */}
           <div className="text-xl text-center text-gray-900 ">
             <p className="text-base  md:text-3xl rounded-xl leading-relaxed">
-              <span className="text-black font-bold"> Exceptional Facilities, </span>
+              <span className="text-black font-bold">{data?.subtitle ? data.subtitle : "Exceptional Facilities"},</span>
               <span className="text-red-500 font-bold"> Exceptional You! </span>
             </p>
             Trusted by <span className="text-red-500">2000+</span> members nationwide

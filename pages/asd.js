@@ -17,6 +17,7 @@ import Faq from "../components/faq";
 import PopupWidget from "../components/popupWidget";
 
 import contactImage from "../public/img/contact.jpg";
+import FacilityTemplate from "../components/facilityTemplate";
 // // import addData from "@/firebase/firestore/addData";
 // import addData from "./_firebaseFuncs";
 // const handleForm = async () => {
@@ -44,6 +45,9 @@ const Home = () => {
       {/* <Banner /> */}
       <hr />
       asd
+      <Banner data={{ subtitle: "qweqweqwe" }} />
+      <FacilityTemplate />
+      <Benefits data={benefitOne} />
       <Faq />
       <Cta />
       <Contact

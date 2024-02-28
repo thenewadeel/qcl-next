@@ -34,7 +34,7 @@ const Facilities = () => {
   return (
     <>
       <Container
-        className=" scrollStop d:p-20  shadow-inner bg-[url('../public/img/club-pics/club_image_12.JPG')] object-cover bg-fixed bg-cover rounded-xl h-auto"
+        className=" scrollStop d:p-20   bg-[url('../public/img/club-pics/club_image_12.JPG')] object-cover bg-fixed bg-cover rounded-xl h-auto"
         // name="facilities"
       >
         <div
