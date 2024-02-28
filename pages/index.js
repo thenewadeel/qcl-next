@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Hero from "../components/hero";
-import Banner from "../components/banner";
+import Banner1 from "../components/banner1";
 import History from "../components/history";
 import Splide1 from "../components/splide1";
 import SplideCarousal from "../components/splideCarousel";
@@ -34,7 +34,7 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <Banner />
+      <Banner1 />
       <hr />
       <History />
       <Facilities />
