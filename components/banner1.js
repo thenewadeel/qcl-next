@@ -2,32 +2,25 @@ import Image from "next/image";
 import Container from "./container";
 import bannerImg from "../public/img/banner.jpg";
 
-const Banner = (props) => {
+const Banner1 = (props) => {
   const { data } = props;
 
   return (
     <>
-      <Container className={`flex flex-wrap h-screen scrollStop  rounded-xl w-full`}>
-        <div className="flex flex-col justify-between border-4 border-black w-full lg:w-full p-8">
-          <div class="absolute inset-0 overflow-hidden -z-40">
-            <img
-              src={data?.coverImg?.src ? data.coverImg.src : "https://readymadeui.com/cardImg.webp"}
-              alt="Background Image"
-              class="w-full h-full max-h-screen object-fit opacity-80 -z-50"
-            />
-          </div>
-          <div className="text-xl p-4 md:p-8 max-w-2xl md:mx-10   shadow-black dark:shadow-red-900  shadow-lg rounded-xl backdrop-blur-md bg-opacity-70 text-gray-200 bg-stone-950 dark:bg-zinc-950 dark:text-white dark:bg-opacity-50 ">
-            <p className="text-base  md:text-3xl  leading-relaxed">
-              <span className="font-extrabold md:p-4 ">{data?.title ? data.title : "Exceptional Facilities"},</span>
-              <br />
-              <span className=" font-bold md:p-4">{data?.subtitle ? data.subtitle : "Exceptional You!"} </span>
+      <Container className=" flex flex-wrap h-screen bg-[url('../public/img/banner.jpg')] scrollStop object-cover bg-fixed bg-cover rounded-xl w-full">
+        <div name="home" className="flex flex-col justify-center items-center w-full lg:w-full ">
+          <img
+            src="/img/qcl watermark.png"
+            alt=""
+            className="shadowfilter self-center rounded-xl rounded-t-full bg-black bg-opacity-40 border-4 border-white hover:bg-opacity-100"
+          />
+          {/* <div className="max-w-2xl mb-8"></div> */}
+          <div className="text-xl text-center text-gray-900 ">
+            <p className="text-base  md:text-3xl rounded-xl leading-relaxed">
+              <span className="text-black font-bold">{data?.subtitle ? data.subtitle : "Exceptional Facilities"},</span>
+              <span className="text-red-500 font-bold"> Exceptional You! </span>
             </p>
-            <p className="text-xs md:text-base">{data?.punchline}</p>
-          </div>
-          <div className="text-xl p-4 md:w-1/2 md:mx-10   shadow-black dark:shadow-sky-900  shadow-md rounded-xl backdrop-blur-md bg-opacity-40 text-gray-800 bg-stone-950 dark:bg-zinc-800 dark:text-yellow-200 dark:bg-opacity-50 self-end">
-            <p className="text-base  md:text-xl  leading-relaxed font-extrabold md:p-2 text-center">
-              {data?.desc ? data.desc : "Exceptional Facilities"}
-            </p>
+            Trusted by <span className="text-red-500">2000+</span> members nationwide
           </div>
         </div>
       </Container>
@@ -120,4 +113,4 @@ const Banner = (props) => {
 //   );
 // }
 
-export default Banner;
+export default Banner1;

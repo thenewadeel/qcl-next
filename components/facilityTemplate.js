@@ -2,61 +2,75 @@ import Image from "next/image";
 import React from "react";
 import Container from "./container";
 import defaultImage from "../public/img/qcl.jpg";
+import coverImage from "../public/img/gym.jpg";
+import iconImg from "../public/img/mission.jpg";
+import Banner from "./banner";
 
 const FacilityTemplate = (props) => {
   const { data } = props;
   return (
     <>
-      <Container className="flex flex-wrap mb-20 lg:gap-10 lg:flex-nowrap ">
-        <div
-          className={`flex items-center justify-center w-full lg:w-1/2 ${
-            props?.imgPos === "right" ? "lg:order-1" : ""
-          }`}
-        >
-          <div>
-            <Image
-              src={data?.image ? data.image : defaultImage.src}
-              width="521"
-              height="521"
-              alt="Benefits"
-              className={"object-cover"}
-              // placeholder="blur"
-              // blurDataURL={data?.image?.src}
-            />
+      <Container>
+        <Banner
+          data={{
+            title: "Restaurant 1",
+            subtitle: " Cuisine is at Us!",
+            punchline: "Over 30,000 calories served every minute",
+            coverImg: { src: coverImage.src, className: "border-8 border-red-900" },
+            desc: "A total of 50+ cuisine dishes await you",
+          }}
+        />
+        <div className="flex flex-wrap mb-20 lg:gap-10 lg:flex-nowrap ">
+          <div
+            className={`flex items-center justify-center w-full lg:w-1/2 ${
+              props?.imgPos === "right" ? "lg:order-1" : ""
+            }`}
+          >
+            <div>
+              <Image
+                src={data?.image ? data.image : defaultImage.src}
+                width="521"
+                height="521"
+                alt="Benefits"
+                className={"object-cover"}
+                // placeholder="blur"
+                // blurDataURL={data?.image?.src}
+              />
+            </div>
           </div>
-        </div>
 
-        <div
-          className={`flex flex-wrap items-center w-full lg:w-1/2 ${
-            data?.imgPos === "right" ? "lg:justify-end" : "rounded-xl"
-          }`}
-        >
-          <div className="justify-between border-4 border-red-900 h-full">
-            <div className="flex flex-col w-full mt-4 border-4 border-red-300">
-              <div
-                className="text-left  p-8 shadow-black dark:shadow-sky-900 dark:border-4 dark:border-gray-900 shadow-lg rounded-xl  w-full   backdrop-blur-md bg-stone-950 bg-opacity-70
+          <div
+            className={`flex flex-wrap items-center w-full lg:w-1/2 ${
+              data?.imgPos === "right" ? "lg:justify-end" : "rounded-xl"
+            }`}
+          >
+            <div className="justify-between border-4 border-red-900 h-full">
+              <div className="flex flex-col w-full mt-4 border-4 border-red-300">
+                <div
+                  className="text-left  p-8 shadow-black dark:shadow-sky-900 dark:border-4 dark:border-gray-900 shadow-lg rounded-xl  w-full   backdrop-blur-md bg-stone-950 bg-opacity-70
         text-gray-200"
-              >
-                <h2 className=" font-extrabold mb-6 ">Welcome to Our Website</h2>
-                <p className="mb-4 text-sm">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquam, ipsum vel iaculis bibendum,
-                  justo turpis ullamcorper mauris, non aliquam nisi purus vel nisl. Integer efficitur turpis in bibendum
-                  tincidunt.
+                >
+                  <h2 className=" font-extrabold mb-6 ">Welcome to Our Website</h2>
+                  <p className="mb-4 text-sm">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquam, ipsum vel iaculis bibendum,
+                    justo turpis ullamcorper mauris, non aliquam nisi purus vel nisl. Integer efficitur turpis in
+                    bibendum tincidunt.
+                  </p>
+                </div>
+                <h3 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
+                  {data?.title ? data.title : "Titleeee"}
+                </h3>
+
+                <p className="max-w-2xl py-4 text-lg leading-normal text-gray-500 lg:text-xl xl:text-xl dark:text-gray-300">
+                  {data?.desc ? data.desc : "Desccccccc"}
                 </p>
               </div>
-              <h3 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
-                {data?.title ? data.title : "Titleeee"}
-              </h3>
 
-              <p className="max-w-2xl py-4 text-lg leading-normal text-gray-500 lg:text-xl xl:text-xl dark:text-gray-300">
-                {data?.desc ? data.desc : "Desccccccc"}
-              </p>
-            </div>
-
-            <div className="w-full mt-5">
-              {/* {data.bullets.map((item, index) => ( */}
-              "Bulletttttt"
-              {/* ))} */}
+              <div className="w-full mt-5">
+                {/* {data.bullets.map((item, index) => ( */}
+                "Bulletttttt"
+                {/* ))} */}
+              </div>
             </div>
           </div>
         </div>
