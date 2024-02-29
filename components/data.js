@@ -28,26 +28,26 @@ import saunaImg from "../public/img/facilities/sauna.jpg";
 import saunaBannerImg from "../public/img/facilities/saunaBanner.jpg";
 import steamImg from "../public/img/facilities/steam.jpg";
 import steamBannerImg from "../public/img/facilities/steamBanner.jpg";
-// import billiardImg from "../public/img/facilities/billiard.jpg";
-// import billiardBannerImg from "../public/img/facilities/billiardBanner.jpg";
-// import chessImg from "../public/img/facilities/chess.jpg";
-// import chessBannerImg from "../public/img/facilities/chessBanner.jpg";
-// import coffeeImg from "../public/img/facilities/coffee.jpg";
-// import coffeeBannerImg from "../public/img/facilities/coffeeBanner.jpg";
-// import rooftopImg from "../public/img/facilities/golf.jpg";
-// import rooftopBannerImg from "../public/img/facilities/golfBanner.jpg";
-// import lodgesImg from "../public/img/facilities/golf.jpg";
-// import lodgesBannerImg from "../public/img/facilities/golfBanner.jpg";
-// import banHallImg from "../public/img/facilities/golf.jpg";
-// import banHallBannerImg from "../public/img/facilities/golfBanner.jpg";
-// import confRoomImg from "../public/img/facilities/golf.jpg";
-// import confRoomBannerImg from "../public/img/facilities/golfBanner.jpg";
-// import arabianCourtyardImg from "../public/img/facilities/golf.jpg";
-// import arabianCourtyardBannerImg from "../public/img/facilities/golfBanner.jpg";
-// import hallsImg from "../public/img/facilities/golf.jpg";
-// import hallsBannerImg from "../public/img/facilities/golfBanner.jpg";
-// import lawnsImg from "../public/img/facilities/golf.jpg";
-// import lawnsBannerImg from "../public/img/facilities/golfBanner.jpg";
+import billiardImg from "../public/img/facilities/billiard.jpg";
+import billiardBannerImg from "../public/img/facilities/billiardBanner.jpg";
+import chessImg from "../public/img/facilities/chess.jpg";
+import chessBannerImg from "../public/img/facilities/chessBanner.jpg";
+import coffeeImg from "../public/img/facilities/coffee.jpg";
+import coffeeBannerImg from "../public/img/facilities/coffeeBanner.jpg";
+import rooftopImg from "../public/img/facilities/rooftop.jpg";
+import rooftopBannerImg from "../public/img/facilities/rooftopBanner.jpg";
+import lodgesImg from "../public/img/facilities/lodges.jpg";
+import lodgesBannerImg from "../public/img/facilities/lodgesBanner.jpg";
+import banHallImg from "../public/img/facilities/banHall.jpg";
+import banHallBannerImg from "../public/img/facilities/banHallBanner.jpg";
+import confRoomImg from "../public/img/facilities/confRoom.jpg";
+import confRoomBannerImg from "../public/img/facilities/confRoomBanner.jpg";
+import arabianCourtyardImg from "../public/img/facilities/arabianCourtyard.jpg";
+import arabianCourtyardBannerImg from "../public/img/facilities/arabianCourtyardBanner.jpg";
+// import hallsImg from "../public/img/facilities/halls.jpg";
+// import hallsBannerImg from "../public/img/facilities/hallsBanner.jpg";
+// import lawnsImg from "../public/img/facilities/lawns.jpg";
+// import lawnsBannerImg from "../public/img/facilities/lawnsBanner.jpg";
 
 const golfData = {
   bannerData: {
@@ -234,7 +234,7 @@ const steamData = {
     desc: "Empower Yourself in a Supportive Space",
   },
   sectionData: {
-    title: "Sauna Bath",
+    title: "Steam Bath",
     desc: "Indulge in the therapeutic warmth and gentle humidity of our inviting steam bath. Immerse yourself in a cloud of invigorating steam, letting your worries dissipate as your body and mind find complete relaxation.  Whether you're seeking to ease muscle tension, soothe respiratory discomfort, or simply escape the daily grind, our steam bath offers a haven for rejuvenation and well-being.",
     image: steamImg,
     bullets: [
@@ -252,6 +252,244 @@ const steamData = {
         title: "Respiratory benefits",
         desc: "Open and clear your airways, potentially easing symptoms of congestion and promoting clearer breathing.",
         icon: <SunIcon />,
+      },
+    ],
+  },
+};
+const billiardData = {
+  bannerData: {
+    title: "QCL Billiards",
+    subtitle: "",
+    punchline: "",
+    coverImg: { src: billiardBannerImg.src, className: "border-8 border-red-900" },
+    desc: "Sharpen Your Skills and Challenge Your Friends",
+  },
+  sectionData: {
+    title: "Billiards Room",
+    desc: "Elevate your game night or enjoy a casual afternoon honing your skills in our inviting billiards room at [Facility Name]. Whether you're a seasoned pool shark or a curious beginner, our welcoming atmosphere and top-notch equipment provide the perfect setting for a game of billiards, snooker, or other cue sports.",
+    image: billiardImg,
+    bullets: [
+      {
+        title: "State-of-the-art table",
+        desc: "Enjoy competitive games on our meticulously maintained pool tables and high-quality equipment.",
+        icon: <DevicePhoneMobileIcon />,
+      },
+      {
+        title: "Casual and competitive environments",
+        desc: "Whether you're seeking a fun social gathering or a challenging match, our billiards room caters to both.",
+        icon: <EyeIcon />,
+      },
+    ],
+  },
+};
+const chessData = {
+  bannerData: {
+    title: "QCL Chess & Cards Room",
+    subtitle: " ",
+    punchline: " ",
+    coverImg: { src: chessBannerImg.src, className: "border-8 border-red-900" },
+    desc: "Engage Your Mind and Socialize",
+  },
+  sectionData: {
+    title: "Chess & Cards Room",
+    desc: "Step away from the ordinary and delve into the stimulating world of strategy and friendly competition at our Chess & Cards Room. Whether you're a seasoned chess player, a card game enthusiast, or simply seeking a relaxing social space, our welcoming environment provides the perfect platform to connect, challenge your mind, and enjoy the company of others.",
+    image: chessImg,
+    bullets: [
+      {
+        title: "Relaxing Ambiance",
+        desc: "Unwind and focus in our quiet and comfortable space, designed for enjoyable game sessions.",
+        icon: <DevicePhoneMobileIcon />,
+      },
+      {
+        title: "Socialize",
+        desc: "Connect with friends, meet new people, and foster social interaction through engaging games and friendly competition.",
+        icon: <EyeIcon />,
+      },
+    ],
+  },
+};
+const coffeeData = {
+  bannerData: {
+    title: "Coffee Shop",
+    subtitle: " ",
+    punchline: " ",
+    coverImg: { src: coffeeBannerImg.src, className: "border-8 border-red-900" },
+    desc: "Engage Your Mind and Socialize",
+  },
+  sectionData: {
+    title: "Coffee Shop @ Golfee",
+    desc: "Embrace the aroma of freshly brewed coffee and indulge in delectable treats at our cozy coffee shop. Whether you're seeking a quiet place to work, a casual meeting spot with friends, or simply a moment to relax and recharge, our welcoming atmosphere and delicious offerings cater to all your needs.",
+    image: coffeeImg,
+    bullets: [
+      {
+        title: "Premium coffee selection",
+        desc: "Savor a variety of expertly crafted espresso drinks, brewed coffee, and specialty beverages to suit your taste.",
+        icon: <DevicePhoneMobileIcon />,
+      },
+      {
+        title: "Delectable pastries and snacks",
+        desc: "Indulge in fresh-baked pastries, savory sandwiches, and other delectable treats alongside your coffee.",
+        icon: <EyeIcon />,
+      },
+      {
+        title: "Free Wi-Fi and comfortable seating",
+        desc: "Unwind or work productively in our comfortable setting, complete with free Wi-Fi access.",
+        icon: <EyeIcon />,
+      },
+    ],
+  },
+};
+const rooftopData = {
+  bannerData: {
+    title: "QCL Rooftop Restaurant",
+    subtitle: " ",
+    punchline: " ",
+    coverImg: { src: rooftopBannerImg.src, className: "border-8 border-red-900" },
+    desc: "Savor Exquisite Cuisine with Breathtaking Views",
+  },
+  sectionData: {
+    title: "Rooftop Restaurant",
+    desc: "Elevate your dining experience and embark on a culinary journey under the stars at QCL's captivating rooftop restaurant. Perched atop [mention location description], our restaurant offers a unique blend of delectable cuisine, stunning panoramic vistas, and an unforgettable ambiance.",
+    image: rooftopImg,
+    bullets: [
+      {
+        title: "breathtaking natural landscapes",
+        desc: "Immerse yourself in the captivating views of [mention specific sights or scenery] while you dine.",
+        icon: <DevicePhoneMobileIcon />,
+      },
+      {
+        title: "Exquisite cuisine",
+        desc: "Savor meticulously prepared dishes crafted with seasonal ingredients, showcasing the culinary artistry of our talented chefs.",
+        icon: <EyeIcon />,
+      },
+      {
+        title: "relaxed atmosphere",
+        desc: "Enjoy a sophisticated dining experience with a relaxed and inviting ambience, perfect for intimate gatherings or special occasions.",
+        icon: <EyeIcon />,
+      },
+    ],
+  },
+};
+const lodgesData = {
+  bannerData: {
+    title: "QCL Lodges",
+    subtitle: " ",
+    punchline: " ",
+    coverImg: { src: lodgesBannerImg.src, className: "border-8 border-red-900" },
+    desc: "Our Inviting Lodges",
+  },
+  sectionData: {
+    title: "Lodges",
+    desc: "Escape the ordinary and discover a haven of comfort and tranquility at our charming lodges. Nestled amidst [mention surroundings, e.g., serene landscapes, vibrant cityscapes, or historical landmarks], our lodges offer the perfect blend of relaxation and exploration, catering to both short and extended stays.",
+    image: lodgesImg,
+    bullets: [
+      {
+        title: "Spacious and well-appointed",
+        desc: "Relax and recharge in our comfortable guest rooms, featuring modern amenities and thoughtful touches to ensure a pleasant stay.",
+        icon: <DevicePhoneMobileIcon />,
+      },
+      {
+        title: "Diverse lodging options",
+        desc: "Choose from a variety of room types to suit your needs, whether you're a solo traveler, a couple, or a family seeking a getaway.",
+        icon: <EyeIcon />,
+      },
+      {
+        title: "Convenient amenities",
+        desc: "Enjoy access to essential amenities like Wi-Fi, laundry facilities, and on-site parking, making your stay effortless and enjoyable.",
+        icon: <EyeIcon />,
+      },
+    ],
+  },
+};
+const banHallData = {
+  bannerData: {
+    title: "QCL Banquet Halls",
+    subtitle: " ",
+    punchline: " ",
+    coverImg: { src: banHallBannerImg.src, className: "border-8 border-red-900" },
+    desc: "Celebrate in Style",
+  },
+  sectionData: {
+    title: "Banquet Halls",
+    desc: "Plan your dream events, a premier venue renowned for its elegant ambiance, exceptional service, and attention to detail. Whether you're hosting a wedding reception, corporate gathering, social celebration, or any other special occasion, our versatile space and dedicated team cater to every aspect of your vision, ensuring a truly unforgettable experience.",
+    image: banHallImg,
+    bullets: [
+      {
+        title: "Elegant and spacious setting",
+        desc: "Immerse your guests in a sophisticated atmosphere with our beautifully designed banquet hall.",
+        icon: <DevicePhoneMobileIcon />,
+      },
+      {
+        title: "Customizable event space",
+        desc: "Tailor the venue to suit your needs with flexible room configurations and customizable decor options to create the perfect setting for your event.",
+        icon: <EyeIcon />,
+      },
+      {
+        title: "Impeccable culinary experience",
+        desc: "Delight your guests with exquisite cuisine prepared by our in-house culinary team, offering a variety of catering options to suit your taste and preferences.",
+        icon: <EyeIcon />,
+      },
+    ],
+  },
+};
+const confRoomData = {
+  bannerData: {
+    title: "QCL Conference Room",
+    subtitle: " ",
+    punchline: " ",
+    coverImg: { src: confRoomBannerImg.src, className: "border-8 border-red-900" },
+    desc: "Celebrate in Style",
+  },
+  sectionData: {
+    title: "Conference Room",
+    desc: "Elevate your meetings and foster collaboration in our state-of-the-art conference rooms. Whether you require an intimate space for brainstorming sessions or a larger venue for presentations and conferences, our diverse selection of rooms caters to all your business needs. Embrace a productive and inspiring environment equipped with the latest technology and dedicated support to ensure the success of your gathering.",
+    image: confRoomImg,
+    bullets: [
+      {
+        title: "Modern technology integration",
+        desc: "Utilize high-definition screens, video conferencing capabilities, and reliable Wi-Fi to enhance your presentations and facilitate seamless communication.",
+        icon: <DevicePhoneMobileIcon />,
+      },
+      {
+        title: "Flexible room configurations",
+        desc: "Adjust the layout of the room to suit your specific needs, fostering collaboration and engaging discussions among participants.",
+        icon: <EyeIcon />,
+      },
+      {
+        title: "Dedicated support staff",
+        desc: "Benefit from the assistance of our experienced event coordinators who will handle logistical details, ensuring your meeting runs smoothly.",
+        icon: <EyeIcon />,
+      },
+    ],
+  },
+};
+const arabianCourtyardData = {
+  bannerData: {
+    title: "QCL Arabian Courtyard",
+    subtitle: " ",
+    punchline: " ",
+    coverImg: { src: arabianCourtyardBannerImg.src, className: "border-8 border-red-900" },
+    desc: "Dine in Enchanting Eastern Ambiance",
+  },
+  sectionData: {
+    title: "Arabian Courtyard",
+    desc: "Embark on a culinary journey through the heart of Arabia within the Arabian Courtyard Hotel. Immerse yourself in the captivating atmosphere, inspired by traditional Arabian architecture and design, as you savor authentic dishes prepared with fresh, local ingredients. Whether you're seeking a romantic evening or a memorable gathering with friends and family, our restaurant promises an unforgettable dining experience.",
+    image: arabianCourtyardImg,
+    bullets: [
+      {
+        title: "Authentic Arabian cuisine",
+        desc: "Explore the rich culinary tapestry of Arabia, featuring succulent grilled meats, aromatic stews, and flavorful vegetarian options.",
+        icon: <DevicePhoneMobileIcon />,
+      },
+      {
+        title: "Locally sourced ingredients",
+        desc: "Savor the freshness and quality of locally sourced ingredients, ensuring a true taste of Arabian culinary tradition.",
+        icon: <EyeIcon />,
+      },
+      {
+        title: "Warm and inviting ambiance",
+        desc: "Step into a world of intricate patterns, soft lighting, and traditional Arabian design elements, creating an enchanting dining atmosphere.",
+        icon: <EyeIcon />,
       },
     ],
   },
@@ -330,14 +568,14 @@ const facilitiesData = {
     gymFData,
     saunaData,
     steamData,
-    // billiardData,
-    // chessData,
-    // coffeeData,
-    // rooftopData,
-    // lodgesData,
-    // banHallData,
-    // confRoomData,
-    // arabianCourtyardData,
+    billiardData,
+    chessData,
+    coffeeData,
+    rooftopData,
+    lodgesData,
+    banHallData,
+    confRoomData,
+    arabianCourtyardData,
     // hallsData,
     // lawnsData,
   ],
