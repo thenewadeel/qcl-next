@@ -13,7 +13,7 @@ export default function Page() {
     return (
       <>
         <Head>
-          <title>Quetta Club Limited</title>
+          <title>{router.query.slug} - Quetta Club Limited</title>
           <meta name="description" content="Quetta Club Limited" />
           <link rel="icon" href="/favicon.ico" />
         </Head>

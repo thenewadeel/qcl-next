@@ -18,16 +18,16 @@ import golfImg from "../public/img/facilities/golf.jpg";
 import golfBannerImg from "../public/img/facilities/golfBanner.jpg";
 import poloImg from "../public/img/facilities/polo.jpg";
 import poloBannerImg from "../public/img/facilities/poloBanner.jpg";
-// import poolImg from "../public/img/facilities/pool.jpg";
-// import poolBannerImg from "../public/img/facilities/poolBanner.jpg";
-// import gymMImg from "../public/img/facilities/gymM.jpg";
-// import gymMBannerImg from "../public/img/facilities/gymMBanner.jpg";
-// import gymFImg from "../public/img/facilities/gymF.jpg";
-// import gymFBannerImg from "../public/img/facilities/gymFBanner.jpg";
-// import saunaImg from "../public/img/facilities/sauna.jpg";
-// import saunaBannerImg from "../public/img/facilities/saunaBanner.jpg";
-// import steamImg from "../public/img/facilities/steam.jpg";
-// import steamBannerImg from "../public/img/facilities/steamBanner.jpg";
+import poolImg from "../public/img/facilities/pool.jpg";
+import poolBannerImg from "../public/img/facilities/poolBanner.jpg";
+import gymMImg from "../public/img/facilities/gymM.jpg";
+import gymMBannerImg from "../public/img/facilities/gymMBanner.jpg";
+import gymFImg from "../public/img/facilities/gymF.jpg";
+import gymFBannerImg from "../public/img/facilities/gymFBanner.jpg";
+import saunaImg from "../public/img/facilities/sauna.jpg";
+import saunaBannerImg from "../public/img/facilities/saunaBanner.jpg";
+import steamImg from "../public/img/facilities/steam.jpg";
+import steamBannerImg from "../public/img/facilities/steamBanner.jpg";
 // import billiardImg from "../public/img/facilities/billiard.jpg";
 // import billiardBannerImg from "../public/img/facilities/billiardBanner.jpg";
 // import chessImg from "../public/img/facilities/chess.jpg";
@@ -111,7 +111,151 @@ const poloData = {
     ],
   },
 };
-
+const poolData = {
+  bannerData: {
+    title: "QCL Swimming Pool",
+    subtitle: "",
+    punchline: "Dive into Relaxation and Recreation ",
+    coverImg: { src: poolBannerImg.src, className: "border-8 border-red-900" },
+    desc: "Ready to make a splash?",
+  },
+  sectionData: {
+    title: "Swimming Pool",
+    desc: "Dive into Relaxation and Recreation. Escape the ordinary and discover a refreshing oasis at QCL Swimming Pool . Immerse yourself in the crystal-clear waters, unwind under the warm sun, or invigorate your body with a refreshing swim. Whether you're seeking a leisurely escape, an active workout, or quality family time, our inviting pool caters to all preferences and provides the perfect setting to relax, reconnect, and recharge.",
+    image: poolImg,
+    bullets: [
+      {
+        title: "Unwind",
+        desc: "Glide through the refreshing water, enjoying the invigorating sensation of a leisurely swim or challenging laps.",
+        icon: <DevicePhoneMobileIcon />,
+      },
+    ],
+  },
+};
+const gymMData = {
+  bannerData: {
+    title: "QCL Men's Gym",
+    subtitle: "!",
+    punchline: "Ignite Your Fitness Journey",
+    coverImg: { src: gymMBannerImg.src, className: "border-8 border-red-900" },
+    desc: "Unleash Your Potential at QCL",
+  },
+  sectionData: {
+    title: "Men's Gym",
+    desc: "Empower yourself to reach your fitness goals in a supportive and motivating environment at [Gym Name]. We offer state-of-the-art equipment, diverse fitness programs, and expert guidance, catering to all experience levels and aspirations. Whether you're seeking to build strength, improve endurance, or enhance your overall well-being, we're here to support you every step of the way.",
+    image: gymMImg,
+    bullets: [
+      {
+        title: "World-class equipment",
+        desc: "Train with a comprehensive range of weight training machines, cardio equipment, and functional training tools.",
+        icon: <DevicePhoneMobileIcon />,
+      },
+      {
+        title: "Expert guidance",
+        desc: "Our certified trainers are dedicated to helping you achieve your fitness goals with personalized training and support.",
+        icon: <EyeIcon />,
+      },
+      {
+        title: "Welcoming atmosphere",
+        desc: "Feel motivated and inspired by our friendly staff and supportive community of fellow fitness enthusiasts.",
+        icon: <SunIcon />,
+      },
+    ],
+  },
+};
+const gymFData = {
+  bannerData: {
+    title: "QCL Ladies Gym",
+    subtitle: "!",
+    punchline: "Ignite Your Fitness Journey",
+    coverImg: { src: gymFBannerImg.src, className: "border-8 border-red-900" },
+    desc: "Empower Yourself in a Supportive Space",
+  },
+  sectionData: {
+    title: "Ladies Gym",
+    desc: "Embrace your fitness journey in a dedicated and empowering environment at QCL Ladies Gym. We offer a welcoming space designed specifically for women, equipped with top-notch facilities, diverse programs, and supportive guidance to help you achieve your unique goals.",
+    image: gymFImg,
+    bullets: [
+      {
+        title: "Specialized classes",
+        desc: "Choose from a variety of group fitness classes designed for women, including strength training, cardio, and mind-body programs.",
+        icon: <DevicePhoneMobileIcon />,
+      },
+      {
+        title: "Expert female trainers",
+        desc: "Receive personalized guidance and motivation from our certified female trainers who understand your specific needs and goals.",
+        icon: <EyeIcon />,
+      },
+      {
+        title: "Privacy and security",
+        desc: "Enjoy dedicated ladies-only areas for training and relaxation, prioritizing your comfort and privacy.",
+        icon: <SunIcon />,
+      },
+    ],
+  },
+};
+const saunaData = {
+  bannerData: {
+    title: "QCL Sauna Bath",
+    subtitle: "!",
+    punchline: "Rejuvenate",
+    coverImg: { src: saunaBannerImg.src, className: "border-8 border-red-900" },
+    desc: "Empower Yourself in a Supportive Space",
+  },
+  sectionData: {
+    title: "Sauna Bath",
+    desc: "Experience the restorative power of heat therapy in our serene sauna. Immerse yourself in a warm, dry environment, allowing relaxation to wash over you as your body releases stress and tension. Whether you're seeking post-workout recovery, improved circulation, or simply a moment of self-care, our sauna provides the perfect sanctuary for rejuvenation.",
+    image: saunaImg,
+    bullets: [
+      {
+        title: "Relaxation and stress relief",
+        desc: "De-stress and unwind in the soothing heat, allowing your worries to melt away.",
+        icon: <DevicePhoneMobileIcon />,
+      },
+      {
+        title: "Muscle recovery",
+        desc: "Promote muscle relaxation and improve recovery after exercise or physical activity.",
+        icon: <EyeIcon />,
+      },
+      {
+        title: "Improved circulation",
+        desc: "Enhance blood flow throughout your body for increased oxygen delivery and detoxification.",
+        icon: <SunIcon />,
+      },
+    ],
+  },
+};
+const steamData = {
+  bannerData: {
+    title: "QCL Steam Bath",
+    subtitle: "!",
+    punchline: "Soothing Steam Bath",
+    coverImg: { src: steamBannerImg.src, className: "border-8 border-red-900" },
+    desc: "Empower Yourself in a Supportive Space",
+  },
+  sectionData: {
+    title: "Sauna Bath",
+    desc: "Indulge in the therapeutic warmth and gentle humidity of our inviting steam bath. Immerse yourself in a cloud of invigorating steam, letting your worries dissipate as your body and mind find complete relaxation.  Whether you're seeking to ease muscle tension, soothe respiratory discomfort, or simply escape the daily grind, our steam bath offers a haven for rejuvenation and well-being.",
+    image: steamImg,
+    bullets: [
+      {
+        title: "Deep relaxation and stress relief",
+        desc: "Allow the soothing warmth and humidity to melt away stress and tension, promoting a sense of calm and well-being.",
+        icon: <DevicePhoneMobileIcon />,
+      },
+      {
+        title: "Muscle tension relief",
+        desc: "Ease muscle aches and stiffness, promoting improved flexibility and range of motion.",
+        icon: <EyeIcon />,
+      },
+      {
+        title: "Respiratory benefits",
+        desc: "Open and clear your airways, potentially easing symptoms of congestion and promoting clearer breathing.",
+        icon: <SunIcon />,
+      },
+    ],
+  },
+};
 const benefitOne = {
   title: "Highlight your benefits",
   desc: "You can use this space to highlight your first benefit or a feature of your product. It can also contain an image or Illustration like in the example along with some bullet points.",
@@ -181,11 +325,11 @@ const facilitiesData = {
   objs: [
     golfData,
     poloData,
-    // poolData,
-    // gymMData,
-    // gymFData,
-    // saunaData,
-    // steamData,
+    poolData,
+    gymMData,
+    gymFData,
+    saunaData,
+    steamData,
     // billiardData,
     // chessData,
     // coffeeData,
