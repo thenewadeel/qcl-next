@@ -2,6 +2,8 @@ import Link from "next/link";
 import ThemeChanger from "./DarkSwitch";
 import Image from "next/image";
 import { Disclosure } from "@headlessui/react";
+import facilitiesMenuGp from "./data";
+import { ArrowUpIcon, ArrowDownIcon, ArrowRightIcon } from "@heroicons/react/24/solid";
 
 const Navbar = () => {
   const navigation = ["Home", "History", "Facilities", "Gallery", "Blog", "Contact Us"];
@@ -54,6 +56,7 @@ const Navbar = () => {
                         className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-red-500  focus:text-red-500 focus:bg-red-100 dark:focus:bg-red-800 focus:outline-none dark:focus:text-yellow-500 focus:font-bold"
                       >
                         {item}
+                        {item == "Facilities" && "qwertyu"}
                       </Link>
                     ))}
                     <Link
@@ -80,6 +83,44 @@ const Navbar = () => {
                 >
                   {menu}
                 </Link>
+                {menu == "Facilities" && (
+                  <Disclosure>
+                    {({ open }) => (
+                      <>
+                        {/* <div className="flex flex-wrap items-center justify-between w-full lg:w-auto"> */}
+                        <Disclosure.Button
+                          aria-label="Toggle Menu"
+                          className="px-2 py-1 ml-auto text-gray-500 rounded-md  hover:text-gray-900  focus:bg-indigo-100 focus:outline-none dark:text-gray-300 dark:focus:bg-trueGray-700 "
+                        >
+                          <ArrowDownIcon className="w-6 h-full  stroke-gray-500 m-0 p-0 stroke-2" />
+                        </Disclosure.Button>
+
+                        <Disclosure.Panel className="absolute flex top-10  flex-col w-56 my-5  p-2 m-4 bg bg-white dark:bg-red-950 rounded-b-xl  z-50 dark:shadow-gray-300 shadow-gray-700 shadow-lg">
+                          <>
+                            {Object.keys(facilitiesMenuGp).map((item, index) => (
+                              <div className="w-full  text-gray-500 rounded-md dark:text-gray-300 hover:text-gray-900   focus:bg-red-100 dark:focus:bg-red-800 focus:outline-none dark:focus:text-yellow-500 focus:font-bold  text-start">
+                                <span className="text-sm font-semibold">{item}</span>
+                                {/* <ArrowRightIcon className="w-6 h-full  stroke-white m-0 p-0 " /> */}
+                                <div className="py-2 mx-4 ">
+                                  {facilitiesMenuGp[item].map((linkText, index) => (
+                                    <Link
+                                      key={index}
+                                      href={"/facilities/" + linkText}
+                                      className="dark:hover:bg-red-900  block p-1 whitespace-nowrap text-md rounded-lg px-4 hover:font-bold"
+                                    >
+                                      {linkText}
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+                            ))}
+                          </>
+                        </Disclosure.Panel>
+                        {/* </div> */}
+                      </>
+                    )}
+                  </Disclosure>
+                )}
               </li>
             ))}
           </ul>
