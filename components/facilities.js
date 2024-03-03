@@ -27,18 +27,31 @@ const Facilities = () => {
                 Quetta Golf Club and Gym Khana.
               </p>
             </div>
-            <div className="grid md:grid-cols-2 gap-4 max-md:max-w-lg mx-auto">
-              {facilitiesData.names.map((facility, index) => (
+            <div className="">
+              {Object.keys(facilitiesData.facilitiesMenuGp).map((facilityGpName, index) => (
                 <>
-                  {/* {index % 3 == 0 && "pop"} */}
-                  <Card
-                    data={{
-                      heading: facility,
-                      text: facilitiesData.objs[index].sectionData.desc,
-                      link: `/facilities/${facility}`,
-                    }}
-                    key={index}
-                  />
+                  <div className="w-full bg-gray-400 dark:bg-stone-500 dark:bg-opacity-30 bg-opacity-30 md:p-4 py-4  text-center text-2xl font-bold rounded-xl my-2 p-2">
+                    {facilityGpName}
+                    <div className="space-y-2">
+                      {" "}
+                      <br />
+                    </div>
+                    <div className=" grid md:grid-cols-2 gap-4 max-md:max-w-lg mx-auto">
+                      {facilitiesData.facilitiesMenuGp[facilityGpName].map((facility, index) => (
+                        <>
+                          {/* {index % 3 == 0 && "pop"} */}
+                          <Card
+                            data={{
+                              heading: facility,
+                              text: facilitiesData.objs[facilitiesData.names.indexOf(facility)].sectionData.desc,
+                              link: `/facilities/${facility}`,
+                            }}
+                            key={index}
+                          />
+                        </>
+                      ))}
+                    </div>
+                  </div>
                 </>
               ))}
             </div>
