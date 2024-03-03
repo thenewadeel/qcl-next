@@ -16,12 +16,14 @@ const Facilities = () => {
           name="facilities"
           // data-aos="fade-up"
           id="#facilities"
-          className="flex flex-col max-lg:flex-col items-center w-full justify-start h-auto p-8"
+          className="flex flex-col max-lg:flex-col items-center w-full justify-start h-auto md:p-8"
         >
-          <div className="bg-slate-300 shadow-black shadow-lg bg-opacity-80  flex max-lg:flex-col p-12 dark:bg-zinc-900 dark:text-gray-300 dark:bg-opacity-90 my-8 gap-10 rounded-xl w-full h-auto">
-            <div className="lg:max-w-md mx-auto flex flex-col  space-y-12">
-              <h2 className="text-4xl font-extrabold mb-4">Discover Our Member Exclusive Facilities</h2>
-              <p className=" text-lg text-justify ">
+          <div className="bg-slate-300 shadow-black shadow-lg bg-opacity-80  flex max-lg:flex-col md:p-8 dark:bg-zinc-900 dark:text-gray-300 dark:bg-opacity-90 my-8 gap-10 rounded-xl w-full h-auto">
+            <div className="lg:max-w-md mx-auto flex flex-col  md:space-y-8">
+              <h2 className="text-3xl text-center font-extrabold mb-4  p-4 md:text-left md:px-0">
+                Discover Our Member Exclusive Facilities
+              </h2>
+              <p className=" text-lg text-justify px-8 md:px-0">
                 Embark on a Journey of Refined Excellence: Explore Our Prestigious Facilities. From the Historic Golf
                 Course to State-of-the-Art Gymnasiums and Tranquil Spa Sanctuaries, Discover the Epitome of Luxury at
                 Quetta Golf Club and Gym Khana.

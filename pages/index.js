@@ -36,8 +36,19 @@ const Home = () => {
       <Navbar />
       <Banner1 />
       <hr />
-      <History />
-      <Facilities />
+      <div name="history">
+        <SectionTitle pretitle="History" title="Through Time"></SectionTitle>
+        <History />
+      </div>
+      <div name="facilities">
+        <SectionTitle pretitle="Facilities" title="Our Facilities"></SectionTitle>
+        <Facilities />
+      </div>
+      <div name="gallery">
+        <SectionTitle pretitle="Gallery" title="A Window through Time">
+          Our vibrant community thrives on a diverse range of activities, catering to a multitude of interests.
+        </SectionTitle>
+      </div>
       <SplideCarousal />
       {/* <SectionTitle pretitle="Nextly Benefits" title=" Why should you use this landing page">
         Nextly is a free landing page & marketing website template for startups and indie projects. Its built with

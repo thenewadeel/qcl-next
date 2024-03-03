@@ -83,8 +83,8 @@ const golfData = {
 const poloData = {
   bannerData: {
     title: "QCL Polo Club",
-    subtitle: "Giggy up!",
-    punchline: "Over 30 horse power",
+    subtitle: "Giddy up!",
+    punchline: "More tha much horse power",
     coverImg: { src: poloBannerImg.src, className: "border-8 border-red-900" },
     desc: "Immerse Yourself in the Majesty of Polo at QCL",
   },
@@ -114,7 +114,7 @@ const poloData = {
 const poolData = {
   bannerData: {
     title: "QCL Swimming Pool",
-    subtitle: "",
+    subtitle: " ",
     punchline: "Dive into Relaxation and Recreation ",
     coverImg: { src: poolBannerImg.src, className: "border-8 border-red-900" },
     desc: "Ready to make a splash?",
@@ -135,7 +135,7 @@ const poolData = {
 const gymMData = {
   bannerData: {
     title: "QCL Men's Gym",
-    subtitle: "!",
+    subtitle: " ",
     punchline: "Ignite Your Fitness Journey",
     coverImg: { src: gymMBannerImg.src, className: "border-8 border-red-900" },
     desc: "Unleash Your Potential at QCL",
@@ -166,8 +166,8 @@ const gymMData = {
 const gymFData = {
   bannerData: {
     title: "QCL Ladies Gym",
-    subtitle: "!",
-    punchline: "Ignite Your Fitness Journey",
+    subtitle: " ",
+    punchline: "Your Fitness Journey",
     coverImg: { src: gymFBannerImg.src, className: "border-8 border-red-900" },
     desc: "Empower Yourself in a Supportive Space",
   },
@@ -197,10 +197,10 @@ const gymFData = {
 const saunaData = {
   bannerData: {
     title: "QCL Sauna Bath",
-    subtitle: "!",
+    subtitle: " ",
     punchline: "Rejuvenate",
     coverImg: { src: saunaBannerImg.src, className: "border-8 border-red-900" },
-    desc: "Empower Yourself in a Supportive Space",
+    desc: " ",
   },
   sectionData: {
     title: "Sauna Bath",
@@ -228,7 +228,7 @@ const saunaData = {
 const steamData = {
   bannerData: {
     title: "QCL Steam Bath",
-    subtitle: "!",
+    subtitle: " ",
     punchline: "Soothing Steam Bath",
     coverImg: { src: steamBannerImg.src, className: "border-8 border-red-900" },
     desc: "Empower Yourself in a Supportive Space",
@@ -259,8 +259,8 @@ const steamData = {
 const billiardData = {
   bannerData: {
     title: "QCL Billiards",
-    subtitle: "",
-    punchline: "",
+    subtitle: " ",
+    punchline: " ",
     coverImg: { src: billiardBannerImg.src, className: "border-8 border-red-900" },
     desc: "Sharpen Your Skills and Challenge Your Friends",
   },
