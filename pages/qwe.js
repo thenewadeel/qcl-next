@@ -18,10 +18,20 @@ import Footer from "../components/footer";
 import Testimonials from "../components/testimonials";
 import Cta from "../components/cta";
 import Faq from "../components/faq";
-import { useEffect, state, useState, setState } from "react";
+import { useEffect, useState, setState } from "react";
 import db from "./_firebaseConfig";
 
 const Qwe = () => {
+  const [data, setData] = useState([]);
+  const [state, setState] = useState({
+    // data: [],``assssssaw465
+    loading: false,
+    text: "default",
+  });
+  // this.state = {
+  //   quantity: 1,
+  //   counter: 0,
+  // };
   async function loadCity(name) {
     const cityDoc = doc(getFirestore(), `cities/${name}`);
     const snapshot = await getDoc(cityDoc);
@@ -40,20 +50,30 @@ const Qwe = () => {
     return cityList;
   }
 
-  // useEffect(() => {
-  //   console.log("loading");
-  //   console.log(db);
-  //   loadCity("Multan")
-  //     .then((res) => {
-  //       console.log(res);
-  //       setState("success");
-  //     })
-  //     .catch((err) => {
-  //       console.error("Error:", err);
-  //       console.log("error");
-  //       // setError(err);
-  //     });
-  // }, []);
+  useEffect(() => {
+    console.log("loading");
+    setState({ loading: true });
+    console.log(db);
+
+    const fetchData = async () => {
+      const snapshot = await getCities(db)
+        .then((res) => {
+          console.log({ res });
+          const newData = res.map((doc) => doc);
+          setData(newData);
+          setState({ loading: false });
+
+          return res;
+          // setState("success");
+        })
+        .catch((err) => {
+          console.error("Error:", err);
+          console.log("error");
+          // setError(err);
+        });
+    };
+    fetchData();
+  }, []);
 
   return (
     <>
@@ -65,10 +85,17 @@ const Qwe = () => {
       {/* {console.log(handleForm())} */}
       <Navbar />
       <Banner />
-      <h1>state:{console.log(getCities(db))}</h1>
+      <h1>state:</h1>
+      {state.loading && "Loading"}
       <hr />
-      {/* <Banner data={{ subtitle: "qweqweqwe" }} /> */}
-      {/* <FacilityTemplate data={golfData} /> */}
+      {data.map((dataObj) =>
+        Object.keys(dataObj).map((k, index) => (
+          <p>
+            {k} - {dataObj[k]}
+          </p>
+        ))
+      )}
+      {/* {getCities(db).map((linkText, index) => ({ linkText }))} */}
       <Faq />
       <Footer />
       {/* <PopupWidget /> */}
