@@ -2,13 +2,13 @@ import Link from "next/link";
 import ThemeChanger from "./DarkSwitch";
 import Image from "next/image";
 import { Disclosure } from "@headlessui/react";
-import { facilitiesMenuGp } from "./data";
+import { facilitiesData } from "./data";
 import { ArrowUpIcon, ArrowDownIcon, ArrowRightIcon } from "@heroicons/react/24/solid";
 
 const Navbar = () => {
   const navigation = ["Home", "History", "Facilities", "Gallery", "Blog", "Contact Us"];
   const link_stubs = ["home", "history", "facilities", "gallery", "blog", "contact"];
-
+  const facilitiesMenuGp = facilitiesData.facilitiesMenuGp;
   return (
     <div className="w-full  bg-blend-saturation bg-white dark:bg-red-950 rounded-b-3xl fixed  top-0 z-50 dark:shadow-red-950 shadow-gray-700 shadow-md">
       <nav className="container relative flex flex-wrap items-center justify-between p-2 mx-auto lg:justify-between xl:px-0">

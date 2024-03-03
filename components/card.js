@@ -15,7 +15,9 @@ const Card = (props) => {
       >
         <div className="space-y-4 ">
           <h3 className="text-2xl font-semibold ">{data.heading ? data.heading : "111"}</h3>
-          <p className="text-gray-800 dark:text-gray-200 text-sm ">{data.text ? data.text : "qqqqqqqqqqqq"}</p>
+          <p className="text-gray-800 dark:text-gray-200 text-sm text-justify">
+            {data.text ? data.text : "qqqqqqqqqqqq"}
+          </p>
         </div>
         <Link
           type="button"

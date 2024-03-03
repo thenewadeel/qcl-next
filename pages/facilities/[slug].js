@@ -18,9 +18,9 @@ export default function Page() {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <Navbar />
-        <hr />
+        {/* <hr /> */}
         <FacilityTemplate data={facilitiesData.objs[index]} />
-        <p>Post: {router.query.slug}</p>;
+        {/* <p>Post: {router.query.slug}</p>; */}
         <Faq />
         <Footer />
       </>

@@ -557,8 +557,8 @@ const facilitiesData = {
     "Banquet Hall",
     "Conference Room",
     "Arabian Courtyard",
-    "Halls",
-    "Lawns",
+    // "Halls",
+    // "Lawns",
   ],
   objs: [
     golfData,
@@ -579,11 +579,11 @@ const facilitiesData = {
     // hallsData,
     // lawnsData,
   ],
+  facilitiesMenuGp: {
+    "Social and Dining": ["Coffee Shop", "Rooftop Restaurant", "Arabian Courtyard"],
+    Fittness: ["Swimming Pool", "Men's Gym", "Ladies Gym", "Sauna Bath", "Steam Bath"],
+    Sports: ["Golf Course", "Polo Ground"],
+    "Indoor Games": ["Billiards Room", "Chess & Cards Room"],
+  },
 };
-const facilitiesMenuGp = {
-  "Social and Dining": ["Coffee Shop", "Rooftop Restaurant", "Arabian Courtyard"],
-  Fittness: ["Swimming Pool", "Men's Gym", "Ladies Gym", "Sauna Bath", "Steam Bath"],
-  Sports: ["Golf Course", "Polo Ground"],
-  "Indoor Games": ["Billiards Room", "Chess & Cards Room"],
-};
-export { facilitiesData, facilitiesMenuGp, benefitOne, benefitTwo, golfData, poloData };
+export { facilitiesData, benefitOne, benefitTwo, golfData, poloData };
