@@ -1,9 +1,9 @@
-import firebase_app from "./_firebaseConfig";
-import { getFirestore, doc, setDoc, getDoc } from "firebase/firestore";
+//import firebase_app from "./_firebaseConfig";
+//import { getFirestore, doc, setDoc, getDoc } from "firebase/firestore";
 
-const db = getFirestore(firebase_app);
-export default async function addData(colllection, id, data) {
-  let result = null;
+//const db = getFirestore(firebase_app);
+//export default async function addData(colllection, id, data) {
+/*  let result = null;
   let error = null;
 
   try {
@@ -31,7 +31,7 @@ export async function getDoument(collection, id) {
 
   return { result, error };
 }
-
+*/
 // example usage
 // 'use client'
 // import addData from "@/firebase/firestore/addData";
