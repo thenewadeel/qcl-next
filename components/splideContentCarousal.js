@@ -17,7 +17,7 @@ const splideStyle = {
     transform: "scale(0.9)",
     transformOrigin: "center center",
     objectFit: "cover",
-    ".is-active": {
+    ".isActive": {
       transform: "scale(1)",
     },
   },

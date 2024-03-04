@@ -29,11 +29,11 @@ const History = () => {
     <>
       <Container className="h-full scrollStop md:p-20  bg-[url('../public/img/history.jpg')] object-cover bg-fixed bg-cover rounded-xl ">
         <div name="history" className=" flex flex-col w-full  h-full md:p-4">
-          <div className=" text-xl md:text-3xl font-bold text-red-900 w-max rounded-xl py-4 md:hover:text-black bg-white bg-opacity-60 md:hover:bg-opacity-20 shadow-2xl transition-all duration-1000 mb-4   self-center md:-mt-16">
+          <div className=" text-xl md:text-3xl font-bold text-yellow-600 w-max rounded-xl p-4 md:hover:text-black md:hover:bg-opacity-20 shadow-2xl transition-all duration-1000 mb-4   self-center md:-mt-16    bg-opacity-70  dark:bg-opacity-90  dark:text-gray-200 dark:bg-stone-950 bg-slate-950">
             Discover the Rich History of Quetta Club
           </div>
           <div className=" w-full h-full">
-            <p className="p-4 text-base md:p-8 md:text-2xl rounded-xl  transition-all duration-1000 text-justify text-black font-bold bg-white bg-opacity-40">
+            <p className="p-4 text-base md:p-8 md:text-2xl rounded-xl hover:bg-opacity-100 hover:border-opacity-80 transition-all duration-1000 text-justify text-gray-200  bg-opacity-70  dark:bg-opacity-90  dark:text-gray-200 dark:bg-stone-950 bg-slate-950 ">
               Located in the heart of Quetta Cantt, offering unparalleled amenities, dining and recreation facilities.
               Established in 1891, the club has been a cherished landmark and a beacon of social gatherings for
               generations.
@@ -43,7 +43,7 @@ const History = () => {
                 <h3 className="m-2 text-2xl font-extrabold px-4 py-2 rounded-lg bg-opacity-70  text-gray-200 dark:text-yellow-500 bg-black dark:bg-stone-950 text-center dark:bg-opacity-80 md:max-w-md md:self-center">
                   {para.heading}
                 </h3>
-                <p className="p-4 text-base md:p-8 md:text-2xl rounded-xl hover:bg-opacity-100 hover:border-opacity-80 transition-all duration-1000 text-justify text-gray-200   dark:bg-opacity-90  dark:text-gray-200 dark:bg-stone-950 bg-slate-950 ">
+                <p className="p-4 text-base md:p-8 md:text-2xl rounded-xl hover:bg-opacity-100 hover:border-opacity-80 transition-all duration-1000 text-justify text-gray-200  bg-opacity-70  dark:bg-opacity-90  dark:text-gray-200 dark:bg-stone-950 bg-slate-950 ">
                   {para.text}
                 </p>
               </div>

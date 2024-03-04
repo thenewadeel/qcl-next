@@ -19,7 +19,7 @@ import Testimonials from "../components/testimonials";
 import Cta from "../components/cta";
 import Faq from "../components/faq";
 import { useEffect, useState, setState } from "react";
-import db from "./_firebaseConfig";
+import db from "../components/_firebaseConfig";
 
 const Qwe = () => {
   const [data, setData] = useState([]);
