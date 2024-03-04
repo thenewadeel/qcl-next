@@ -1,7 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore, doc, getDoc, getDocs, collection } from "firebase/firestore";
 
-import firebase_app from "./_firebaseConfig";
 import Head from "next/head";
 import Hero from "../components/hero";
 import Banner from "../components/banner";

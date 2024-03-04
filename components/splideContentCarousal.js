@@ -17,9 +17,9 @@ const splideStyle = {
     transform: "scale(0.9)",
     transformOrigin: "center center",
     objectFit: "cover",
-    ".isActive": {
-      transform: "scale(1)",
-    },
+    // ".isActive": {
+    //   transform: "scale(1)",
+    // },
   },
 };
 

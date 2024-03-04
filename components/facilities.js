@@ -48,7 +48,7 @@ const Facilities = () => {
                               text: facilitiesData.objs[facilitiesData.names.indexOf(facility)].sectionData.desc,
                               link: `/facilities/${facility}`,
                             }}
-                            key={index}
+                            key={facilitiesData.names.indexOf(facility)}
                           />
                         </>
                       ))}
