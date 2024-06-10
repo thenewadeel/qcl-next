@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import Container from "./container";
+import { UserIcon } from "@heroicons/react/24/solid";
 
 const Join = (props) => {
   const { data } = props;
@@ -11,22 +12,34 @@ const Join = (props) => {
           <div className="grid md:grid-cols-3 items-center shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-xl h-full overflow-hidden border-4 border-black">
             <div className="max-md:order-1 flex flex-col justify-center space-y-16 max-md:mt-16 min-h-full bg-gradient-to-r from-gray-900 to-gray-700 lg:px-8 px-4 py-4 border-4 border-red-900">
               <div>
-                <h4 className="text-white text-lg font-semibold">Create Your Account</h4>
-                <p className="text-[13px] text-white mt-2">
-                  Welcome to our registration page! Get started by creating your account.
-                </p>
+                <h4 className="text-white text-lg font-semibold">Register for Membership</h4>
+                <p className="text-[13px] text-white mt-2">Welcome to QCL registration! Get started by applying.</p>
               </div>
-              <div>
-                <h4 className="text-white text-lg font-semibold">Simple & Secure Registration</h4>
-                <p className="text-[13px] text-white mt-2">
-                  Our registration process is designed to be straightforward and secure. We prioritize your privacy and
-                  data security.
-                </p>
+
+              <div className="text-white">
+                <h4 className="text-white text-lg font-semibold">Requirements for Permanent Membership</h4>
+                <ul>
+                  <li>&#8226; Form must be sponsored by two members of Quetta Club.</li>
+                  <li>
+                    &#8226; Keep the following documents ready for membership process : -
+                    <ul>
+                      <li>- Photo copy of CNIC (3)</li>
+                      <li>- Photographs (3)</li>
+                      <li>- B-Form with Family Details</li>
+                      <li>- Photo copy of Domicile</li>
+                      <li>- Official/ Business Card</li>
+                      <li>- NOC & Verification of BPS from Department</li>
+                      <li>- Notification of Appointment</li>
+                      <li>- Cross Checque in favor of Quetta Club Ltd. as per fee structure</li>
+                      <li>- Form Fee (10,000)</li>
+                    </ul>
+                  </li>
+                </ul>
               </div>
             </div>
             <form className="md:col-span-2 w-full py-6 px-6 sm:px-16">
               <div className="mb-6">
-                <h3 className="text-2xl font-bold">Create an account</h3>
+                <h3 className="text-2xl font-bold">Register for Membership</h3>
               </div>
               <div className="space-y-5">
                 <div>
@@ -39,19 +52,7 @@ const Join = (props) => {
                       className="bg-white border border-gray-300 w-full text-sm px-4 py-2.5 rounded-md outline-blue-500"
                       placeholder="Enter name"
                     />
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="#bbb"
-                      stroke="#bbb"
-                      className="w-4 h-4 absolute right-4"
-                      viewBox="0 0 24 24"
-                    >
-                      <circle cx="10" cy="7" r="6" data-original="#000000"></circle>
-                      <path
-                        d="M14 15H6a5 5 0 0 0-5 5 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 5 5 0 0 0-5-5zm8-4h-2.59l.3-.29a1 1 0 0 0-1.42-1.42l-2 2a1 1 0 0 0 0 1.42l2 2a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42l-.3-.29H22a1 1 0 0 0 0-2z"
-                        data-original="#000000"
-                      ></path>
-                    </svg>
+                    <UserIcon className="w-4 h-4 absolute right-4 fill-gray-500" />
                   </div>
                 </div>
                 <div>
@@ -93,6 +94,18 @@ const Join = (props) => {
                   </div>
                 </div>
                 <div>
+                  <label className="text-sm mb-2 block">Phone No.</label>
+                  <div className="relative flex items-center">
+                    <input
+                      name="phone"
+                      type="text"
+                      required
+                      className="bg-white border border-gray-300 w-full text-sm px-4 py-2.5 rounded-md outline-blue-500"
+                      placeholder="Enter Contact No"
+                    />
+                  </div>
+                </div>
+                {/* <div>
                   <label className="text-sm mb-2 block">Password</label>
                   <div className="relative flex items-center">
                     <input
@@ -115,8 +128,8 @@ const Join = (props) => {
                       ></path>
                     </svg>
                   </div>
-                </div>
-                <div className="flex items-center">
+                </div> */}
+                {/* <div className="flex items-center">
                   <input
                     id="remember-me"
                     name="remember-me"
@@ -129,14 +142,14 @@ const Join = (props) => {
                       Terms and Conditions
                     </a>
                   </label>
-                </div>
+                </div> */}
               </div>
               <div className="!mt-10">
                 <button
                   type="button"
                   className="w-full py-3 px-4 text-sm font-semibold rounded text-white bg-gray-700 hover:bg-gray-800 focus:outline-none"
                 >
-                  Create an account
+                  Apply for Membership
                 </button>
               </div>
               <p className="text-sm mt-6 text-center">

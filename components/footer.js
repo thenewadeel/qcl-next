@@ -11,7 +11,7 @@ export default function Footer() {
       <footer className=" py-8 px-10 ">
         <div className="md:max-w-[50%] mx-auto text-center self-center">
           <Link href="/" className="flex items-center space-x-2 text-2xl font-medium text-stone-950 dark:text-gray-100">
-            <Image src="/img/logo.svg" alt="N" width="64" height="64" className="w-24" />
+            <Image src="/img/logo.svg" alt="N" width="512" height="512" className="w-24" />
             <span>Quetta Club</span>
           </Link>
           <p className="text-sm mt-8 dark:text-gray-400">

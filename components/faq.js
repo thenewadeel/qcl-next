@@ -3,7 +3,25 @@ import Container from "./container";
 import { Disclosure } from "@headlessui/react";
 import { ChevronUpIcon } from "@heroicons/react/24/solid";
 
-const Faq = () => {
+const Faq = (props) => {
+  // if(props!==null)
+  let newdata;
+  const { data } = props;
+  console.log(props);
+  // if (!data) {
+  newdata = data
+    ? data
+    : [
+        {
+          question: "Where can I apply for membership?",
+          answer:
+            "Membership forms can be obtained from our operator at the phone number provided in the Contact section.",
+        },
+      ];
+  // } else {
+  // newdata = data;
+  // }
+  const faqdata = newdata;
   return (
     <Container className="!p-0">
       <div className="w-full max-w-2xl p-2 mx-auto rounded-2xl">
@@ -28,12 +46,5 @@ const Faq = () => {
     </Container>
   );
 };
-
-const faqdata = [
-  {
-    question: "Where can I apply for membership?",
-    answer: "Membership forms can be obtained from our operator at the phone number provided in the Contact section.",
-  },
-];
 
 export default Faq;

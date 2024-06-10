@@ -1,5 +1,6 @@
 import React from "react";
 import Container from "./container";
+import Link from "next/link";
 
 const CtaBanner = () => {
   return (
@@ -11,12 +12,13 @@ const CtaBanner = () => {
             A Legacy of Luxury and Distinction. Immerse yourself in an exclusive world of opulence, where prestigious
             facilities meet refined experiences.
           </p>
-          <button
+          <Link
             type="button"
+            href="/join"
             className="px-6 py-3 mt-12 rounded-full text-white text-base tracking-wider font-semibold border-none outline-none bg-gray-600 hover:bg-gray-700"
           >
             Apply for Membership
-          </button>
+          </Link>
         </div>
       </div>
     </Container>
