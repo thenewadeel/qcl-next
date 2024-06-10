@@ -44,7 +44,7 @@ const Home = () => {
                   <li>- NOC & Verification of BPS from Department</li>
                   <li>- Notification of Appointment</li>
                   <li>- Cross Checque in favor of Quetta Club Ltd. as per fee structure</li>
-                  <li>- Form Fee (10,000)</li>
+                  <li className="font-bold">- Form Fee (10,000)</li>
                 </ul>
               </>
             ),
@@ -56,10 +56,22 @@ const Home = () => {
                 <div className="font-bolder text-lg">Civilians:</div>
                 <div className="indent-8">
                   <ul>
-                    <li> - Entrance Fee -Rs. 2,450,000/-</li>
-                    <li> - Security Fee -Rs. 50,000/- (Refundable)</li>
-                    <li> - Total -Rs. 2,500,000/-</li>
-                    <li> - Yearly Subscription - Rs. 50,500/-</li>
+                    <li className="w-full flex flex-row">
+                      <div className="text-left w-full"> - Entrance Fee</div>
+                      <div className="text-start italic w-full">Rs. 2,450,000/-</div>
+                    </li>
+                    <li className="w-full flex flex-row">
+                      <div className="text-left w-full"> - Security Fee</div>
+                      <div className="text-start italic w-full">Rs. 50,000/- (Refundable)</div>
+                    </li>
+                    <li className="font-bold w-full flex flex-row">
+                      <div className="text-left w-full"> - Total</div>
+                      <div className="text-start italic w-full">Rs. 2,500,000/-</div>
+                    </li>
+                    <li className="font-bold w-full flex flex-row">
+                      <div className="text-left w-full"> - Yearly Subscription</div>
+                      <div className="text-start italic w-full">Rs. 50,500/-</div>
+                    </li>
                   </ul>
                 </div>
               </>
@@ -69,22 +81,46 @@ const Home = () => {
             question: "What is Fee Structure for Government Officials?",
             answer: (
               <>
-                <div className="font-bolder text-lg">Government Officials:</div>
+                <div className="font-bold text-lg">Government Officials:</div>
                 <div className="indent-8">
-                  <ul>
-                    <li> - Entrance Fee -Rs. 1970,000/-</li>
-                    <li> - Security Fee -Rs. 30,000/- (Refundable)</li>
-                    <li> - Total -Rs. 2,000,000/-</li>
-                    <li> - Yearly Subscription - Rs. 50,500/-</li>
+                  <ul className="flex flex-col justify-between w-full">
+                    <li className="w-full flex flex-row">
+                      <div className="text-left w-full"> - Entrance Fee</div>
+                      <div className="text-start italic w-full">Rs. 1970,000/-</div>
+                    </li>
+                    <li className="w-full flex flex-row">
+                      <div className="text-left w-full"> - Security Fee</div>
+                      <div className="text-start italic w-full">Rs. 30,000/- (Refundable)</div>
+                    </li>
+                    <li className="font-bold w-full flex flex-row">
+                      <div className="text-left w-full">- Total</div>
+                      <div className="text-start italic w-full"> Rs. 2,000,000/-</div>
+                    </li>
+                    <li className="font-bold w-full flex flex-row">
+                      <div className="text-left w-full"> - Yearly Subscription</div>
+                      <div className="text-start italic w-full">Rs. 50,500/-</div>
+                    </li>
                   </ul>
                 </div>
-                <div className="font-bolder text-lg">Retired Government Officials:</div>
+                <div className="font-bold text-lg">Retired Government Officials:</div>
                 <div className="indent-8">
                   <ul>
-                    <li> - Entrance Fee -Rs. 1970,000/-</li>
-                    <li> - Security Fee -Rs. 30,000/- (Refundable)</li>
-                    <li> - Total -Rs. 2,000,000/-</li>
-                    <li> - Yearly Subscription - Rs. 50,500/-</li>
+                    <li className="w-full flex flex-row">
+                      <div className="text-left w-full"> - Entrance Fee</div>
+                      <div className="text-start italic w-full">Rs. 1970,000/-</div>
+                    </li>
+                    <li className="w-full flex flex-row">
+                      <div className="text-left w-full"> - Security Fee</div>
+                      <div className="text-start italic w-full">Rs. 30,000/- (Refundable)</div>
+                    </li>
+                    <li className="font-bold w-full flex flex-row">
+                      <div className="text-left w-full">- Total</div>
+                      <div className="text-start italic w-full"> Rs. 2,000,000/-</div>
+                    </li>
+                    <li className="font-bold w-full flex flex-row">
+                      <div className="text-left w-full"> - Yearly Subscription</div>
+                      <div className="text-start italic w-full">Rs. 50,500/-</div>
+                    </li>
                   </ul>
                 </div>
               </>
@@ -94,7 +130,7 @@ const Home = () => {
             question: "What is Format for NOC for Government Officers?",
             answer: (
               <>
-                <div className="font-bolder text-lg underline text-center">DRAFT NOC REQUIRED FOR GOVT OFFICERS</div>
+                <div className="font-bold text-lg underline text-center">DRAFT NOC REQUIRED FOR GOVT OFFICERS</div>
                 <div className="indent-8">
                   <p>
                     It is certified that Mr.__________ is a permanent employ / gazetted officer in __________ as

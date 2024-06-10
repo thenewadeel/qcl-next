@@ -21,7 +21,7 @@ export default function Page() {
         {/* <hr /> */}
         <FacilityTemplate data={facilitiesData.objs[index]} />
         {/* <p>Post: {router.query.slug}</p>; */}
-        <Faq />
+        {/* <Faq /> */}
         <Footer />
       </>
     );

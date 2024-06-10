@@ -1,9 +1,9 @@
 import Link from "next/link";
 import ThemeChanger from "./DarkSwitch";
 import Image from "next/image";
-import { Disclosure } from "@headlessui/react";
+import { Disclosure, Transition } from "@headlessui/react";
 import { facilitiesData } from "./data";
-import { ArrowUpIcon, ArrowDownIcon, ArrowRightIcon } from "@heroicons/react/24/solid";
+import { ArrowUpIcon, ArrowDownIcon, ArrowRightIcon, ChevronDownIcon } from "@heroicons/react/24/solid";
 
 const Navbar = () => {
   const navigation = ["Home", "History", "Facilities", "Gallery", "Blog", "Contact Us"];
@@ -47,17 +47,69 @@ const Navbar = () => {
                   </svg>
                 </Disclosure.Button>
 
-                <Disclosure.Panel className="flex flex-wrap w-full my-5 lg:hidden p-2 m-4">
+                <Disclosure.Panel className="flex flex-col w-full my-5 lg:hidden p-2 m-4">
                   <>
+                    <div className="flex flex-col items-center justify-between w-full lg:flex-row">
+                      <ThemeChanger />
+                    </div>
                     {navigation.map((item, index) => (
-                      <Link
-                        key={index}
-                        href={"/#" + link_stubs[index]}
-                        className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-red-500  focus:text-red-500 focus:bg-red-100 dark:focus:bg-red-800 focus:outline-none dark:focus:text-yellow-500 focus:font-bold"
-                      >
-                        {item}
-                        {item == "Facilities" && "qwertyu"}
-                      </Link>
+                      <>
+                        <Link
+                          key={index}
+                          href={"/#" + link_stubs[index]}
+                          className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-red-500  focus:text-red-500 focus:bg-red-100 dark:focus:bg-red-800 focus:outline-none dark:focus:text-yellow-500 focus:font-bold"
+                        >
+                          {item}
+                        </Link>
+                        {/* {item == "Facilities" && "qwertyu"} */}
+                        {item == "Facilities" && (
+                          <Disclosure>
+                            {({ open }) => (
+                              <>
+                                {/* <div className="flex flex-wrap items-center justify-between w-full lg:w-auto"> */}
+                                <Disclosure.Button
+                                  aria-label="Toggle Menu"
+                                  className="px-2  ml-auto w-full h-4 text-gray-500 rounded-md  hover:text-gray-900 flex flex-row items-center"
+                                >
+                                  <ArrowDownIcon className="w-4 -mt-0 h-full  stroke-gray-300 m-0 p-0 stroke-2" />
+                                  {/* <ChevronDownIcon className="w-4 -mt-0 h-full  stroke-gray-300 m-0 p-0 stroke-2 group-data-[open]:rotate-180" /> */}
+                                </Disclosure.Button>
+                                <Transition
+                                  enter="duration-500 ease-out"
+                                  enterFrom="opacity-0 -translate-x-6"
+                                  enterTo="opacity-100 translate-x-0"
+                                  leave="duration-1000 ease-out"
+                                  leaveFrom="opacity-100 translate-y-0"
+                                  leaveTo="opacity-0 -translate-y-6"
+                                >
+                                  <Disclosure.Panel className="relative flex   flex-col pl-8 bg bg-white dark:bg-red-950 rounded-md  z-50 dark:shadow-orange-900 shadow-gray-700 shadow-[inset_0px_0px_16px] py-4">
+                                    <>
+                                      {Object.keys(facilitiesMenuGp).map((item, index) => (
+                                        <div className="w-full  text-gray-500 rounded-md dark:text-gray-300 hover:text-gray-900   focus:bg-red-100 dark:focus:bg-red-800 focus:outline-none dark:focus:text-yellow-500 focus:font-bold  text-start leading-snug">
+                                          <span className="text-sm font-semibold dark:text-orange-200 ">{item}</span>
+                                          {/* <ArrowRightIcon className="w-6 h-full  stroke-white m-0 p-0 " /> */}
+                                          <div className="p-0 m-0 ">
+                                            {facilitiesMenuGp[item].map((linkText, index) => (
+                                              <Link
+                                                key={index}
+                                                href={"/facilities/" + linkText}
+                                                className="dark:hover:bg-red-900  block whitespace-nowrap text-md rounded-lg  hover:font-bold text-left pl-8"
+                                              >
+                                                {linkText}
+                                              </Link>
+                                            ))}
+                                          </div>
+                                        </div>
+                                      ))}
+                                    </>
+                                  </Disclosure.Panel>
+                                </Transition>
+                                {/* </div> */}
+                              </>
+                            )}
+                          </Disclosure>
+                        )}
+                      </>
                     ))}
                     <Link
                       href="/join"
@@ -73,8 +125,8 @@ const Navbar = () => {
         </Disclosure>
 
         {/* menu  */}
-        <div className="hidden text-center lg:flex lg:items-center">
-          <ul className="items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex">
+        <div className="hidden text-center lg:flex ">
+          <ul className="flex flex-row flex-1 pt-6 list-none lg:pt-0 lg:flex ">
             {navigation.map((menu, index) => (
               <li className="mr-3 nav__item" key={index}>
                 <Link
@@ -90,32 +142,40 @@ const Navbar = () => {
                         {/* <div className="flex flex-wrap items-center justify-between w-full lg:w-auto"> */}
                         <Disclosure.Button
                           aria-label="Toggle Menu"
-                          className="px-2 py-1 ml-auto text-gray-500 rounded-md  hover:text-gray-900  focus:bg-indigo-100 focus:outline-none dark:text-gray-300 dark:focus:bg-trueGray-700 "
+                          className="px-2 ml-auto text-gray-500 rounded-md  hover:text-gray-900  focus:bg-indigo-100 focus:outline-none dark:text-gray-300 dark:focus:bg-trueGray-700"
                         >
-                          <ArrowDownIcon className="w-6 h-full  stroke-gray-500 m-0 p-0 stroke-2" />
+                          <ChevronDownIcon className="w-6 h-full  stroke-gray-500 stroke-2" />
                         </Disclosure.Button>
-
-                        <Disclosure.Panel className="absolute flex top-10  flex-col w-56 my-5  p-2 m-4 bg bg-white dark:bg-red-950 rounded-b-xl  z-50 dark:shadow-gray-300 shadow-gray-700 shadow-lg">
-                          <>
-                            {Object.keys(facilitiesMenuGp).map((item, index) => (
-                              <div className="w-full  text-gray-500 rounded-md dark:text-gray-300 hover:text-gray-900   focus:bg-red-100 dark:focus:bg-red-800 focus:outline-none dark:focus:text-yellow-500 focus:font-bold  text-start">
-                                <span className="text-sm font-semibold">{item}</span>
-                                {/* <ArrowRightIcon className="w-6 h-full  stroke-white m-0 p-0 " /> */}
-                                <div className="py-2 mx-4 ">
-                                  {facilitiesMenuGp[item].map((linkText, index) => (
-                                    <Link
-                                      key={index}
-                                      href={"/facilities/" + linkText}
-                                      className="dark:hover:bg-red-900  block p-1 whitespace-nowrap text-md rounded-lg px-4 hover:font-bold"
-                                    >
-                                      {linkText}
-                                    </Link>
-                                  ))}
+                        <Transition
+                          enter="duration-200 ease-out"
+                          enterFrom="opacity-0 -translate-y-6"
+                          enterTo="opacity-100 translate-y-0"
+                          leave="duration-300 ease-out"
+                          leaveFrom="opacity-100 translate-y-0"
+                          leaveTo="opacity-0 -translate-y-6"
+                        >
+                          <Disclosure.Panel className="absolute flex flex-col w-auto p-2  bg bg-white dark:bg-red-950 rounded-b-xl  z-50 dark:shadow-gray-300 shadow-gray-700 shadow-lg">
+                            <>
+                              {Object.keys(facilitiesMenuGp).map((item, index) => (
+                                <div className="w-full  text-gray-500 rounded-md dark:text-gray-300 hover:text-gray-900   focus:bg-red-100 dark:focus:bg-red-800 focus:outline-none dark:focus:text-yellow-500 focus:font-bold  text-start">
+                                  <span className="text-sm font-semibold">{item}</span>
+                                  {/* <ArrowRightIcon className="w-6 h-full  stroke-white m-0 p-0 " /> */}
+                                  <div className="py-2 mx-4 ">
+                                    {facilitiesMenuGp[item].map((linkText, index) => (
+                                      <Link
+                                        key={index}
+                                        href={"/facilities/" + linkText}
+                                        className="dark:hover:bg-red-900  block p-1 whitespace-nowrap text-md rounded-lg px-4 hover:font-bold"
+                                      >
+                                        {linkText}
+                                      </Link>
+                                    ))}
+                                  </div>
                                 </div>
-                              </div>
-                            ))}
-                          </>
-                        </Disclosure.Panel>
+                              ))}
+                            </>
+                          </Disclosure.Panel>
+                        </Transition>
                         {/* </div> */}
                       </>
                     )}

@@ -31,7 +31,7 @@ const Join = (props) => {
                       <li>- NOC & Verification of BPS from Department</li>
                       <li>- Notification of Appointment</li>
                       <li>- Cross Checque in favor of Quetta Club Ltd. as per fee structure</li>
-                      <li>- Form Fee (10,000)</li>
+                      <li className="font-bold">- Form Fee (10,000)</li>
                     </ul>
                   </li>
                 </ul>

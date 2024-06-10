@@ -10,7 +10,7 @@ const FacilityTemplate = (props) => {
     <div className="flex-nowrap">
       <Banner data={data.bannerData} />
       <Benefits imgPos="right" data={data.sectionData} className="px-40 py-20" />
-      <Container className="flex flex-col items-stretch max-w-5xl border-4 border-gray-600 mt-0">
+      {/* <Container className="flex flex-col items-stretch max-w-5xl border-4 border-gray-600 mt-0">
         <div className="p-4">
           <div className="text-center text-2xl self-center font-extrabold">Heading</div>
           <div className="text-center py-2">Deco</div>
@@ -20,7 +20,7 @@ const FacilityTemplate = (props) => {
             <div className="text-lg">thing 1 - explanation </div>
           </div>
         </div>
-      </Container>
+      </Container> */}
     </div>
   );
 };

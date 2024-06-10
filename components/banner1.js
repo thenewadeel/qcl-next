@@ -7,7 +7,7 @@ const Banner1 = (props) => {
 
   return (
     <>
-      <Container className=" flex flex-wrap h-screen bg-[url('../public/img/banner.jpg')] scrollStop object-cover bg-fixed bg-cover rounded-xl w-full">
+      <Container className=" flex flex-wrap h-screen bg-center bg-[url('../public/img/banner.jpg')] scrollStop object-cover bg-fixed bg-cover rounded-xl w-full">
         <div name="home" className="flex flex-col justify-center items-center w-full lg:w-full ">
           <img
             src="/img/qcl watermark.png"
