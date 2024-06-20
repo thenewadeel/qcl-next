@@ -8,3 +8,13 @@
     @apply dark:bg-trueGray-900;
   }
 }
+
+.dark .dark\:bg-Pic-dark {
+  background-image: url("../public/img/qcl watermark min.png");
+  background-size: 100% 100%;
+}
+
+.bg-Pic {
+  background-image: url("../public/img/qcl watermark black min.png");
+  background-size: 100% 100%;
+}

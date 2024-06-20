@@ -20,7 +20,13 @@ const Navbar = () => {
                 <Link href="/">
                   <span className="flex items-center space-x-2 text-2xl font-medium text-red-950 dark:text-gray-100">
                     <span>
-                      <Image src="/img/logo.svg" alt="N" width="512" height="512" className="w-8" />
+                      <div
+                        // src="/img/logo.svg"
+                        // alt="N"
+                        // width="512"
+                        // height="512"
+                        className="w-12 h-12 bg-Pic dark:bg-Pic-dark rounded-full "
+                      />
                     </span>
                     <span>QCL</span>
                   </span>
