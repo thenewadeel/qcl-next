@@ -3,14 +3,15 @@ import ThemeChanger from "./DarkSwitch";
 import Image from "next/image";
 import { Disclosure, Transition } from "@headlessui/react";
 import { facilitiesData } from "./data";
-import { ArrowUpIcon, ArrowDownIcon, ArrowRightIcon, ChevronDownIcon } from "@heroicons/react/24/solid";
+import LoginPage from "../pages/app/loginPage";
+import { ArrowUpIcon, ArrowDownIcon, ArrowRightIcon, ChevronDownIcon, Cog8ToothIcon } from "@heroicons/react/24/solid";
 
 const Navbar = () => {
   const navigation = ["Home", "History", "Facilities", "Gallery", "Blog", "Contact Us"];
   const link_stubs = ["home", "history", "facilities", "gallery", "blog", "contact"];
   const facilitiesMenuGp = facilitiesData.facilitiesMenuGp;
   return (
-    <div className="w-full  bg-blend-saturation bg-white dark:bg-red-950 rounded-b-3xl fixed  top-0 z-50 dark:shadow-red-950 shadow-gray-700 shadow-md">
+    <div className="w-full max-w-[1600px] self-center  bg-blend-saturation bg-white dark:bg-red-950 rounded-b-3xl  fixed  top-0 z-50 md:px-12 py-1   dark:shadow-red-950 shadow-gray-700 shadow-md transition-all duration-1000">
       <nav className="container relative flex flex-wrap items-center justify-between p-2 mx-auto lg:justify-between xl:px-0">
         {/* Logo  */}
         <Disclosure>
@@ -132,12 +133,15 @@ const Navbar = () => {
 
         {/* menu  */}
         <div className="hidden text-center lg:flex ">
-          <ul className="flex flex-row flex-1 pt-6 list-none lg:pt-0 lg:flex ">
+          <ul className="flex flex-row flex-1 pt-6 list-none lg:pt-0 lg:flex  items-center ">
             {navigation.map((menu, index) => (
-              <li className="mr-3 nav__item" key={index}>
+              <li
+                className="mr-3 nav__item flex flex-row text-gray-800  dark:text-gray-200 hover:text-red-900 rounded-md "
+                key={index}
+              >
                 <Link
                   href={"/#" + link_stubs[index]}
-                  className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-red-900 focus:text-red-900 focus:font-bold focus:bg-red-100 focus:outline-none dark:focus:bg-red-800 dark:focus:font-bold"
+                  className="inline-block px-4 py-2 text-lg font-normal focus:font-bold focus:bg-red-100 focus:text-red-900  focus:outline-none dark:focus:bg-red-800 dark:focus:text-white dark:focus:font-bold no-underline rounded-md"
                 >
                   {menu}
                 </Link>
@@ -145,12 +149,12 @@ const Navbar = () => {
                   <Disclosure>
                     {({ open }) => (
                       <>
-                        {/* <div className="flex flex-wrap items-center justify-between w-full lg:w-auto"> */}
+                        {/* <div className="flex flex-wrap items-center justify-between w-auto lg:w-auto border-4 border-red-400"> */}
                         <Disclosure.Button
                           aria-label="Toggle Menu"
-                          className="px-2 ml-auto text-gray-500 rounded-md  hover:text-gray-900  focus:bg-indigo-100 focus:outline-none dark:text-gray-300 dark:focus:bg-trueGray-700"
+                          className="px-2 ml-auto text-gray-500 rounded-md  hover:text-gray-900   dark:text-gray-900 focus:bg-red-100 focus:text-red-900  focus:outline-none dark:focus:bg-red-800 dark:focus:text-white dark:focus:font-bold "
                         >
-                          <ChevronDownIcon className="w-6 h-full  stroke-gray-500 stroke-2" />
+                          <ChevronDownIcon className="relative w-6 h-6 m-0 p-0  stroke-gray-500 dark:stroke-gray-300  stroke-2 " />
                         </Disclosure.Button>
                         <Transition
                           enter="duration-200 ease-out"
@@ -160,7 +164,7 @@ const Navbar = () => {
                           leaveFrom="opacity-100 translate-y-0"
                           leaveTo="opacity-0 -translate-y-6"
                         >
-                          <Disclosure.Panel className="absolute flex flex-col w-auto p-2  bg bg-white dark:bg-red-950 rounded-b-xl  z-50 dark:shadow-gray-300 shadow-gray-700 shadow-lg">
+                          <Disclosure.Panel className="absolute top-14 -left-28 flex flex-col w-auto p-2  bg bg-white dark:bg-red-950 rounded-b-xl  z-50 dark:shadow-gray-300 shadow-gray-700 shadow-lg">
                             <>
                               {Object.keys(facilitiesMenuGp).map((item, index) => (
                                 <div className="w-full  text-gray-500 rounded-md dark:text-gray-300 hover:text-gray-900   focus:bg-red-100 dark:focus:bg-red-800 focus:outline-none dark:focus:text-yellow-500 focus:font-bold  text-start">
@@ -192,15 +196,47 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <div className="hidden mr-3 space-x-4 lg:flex nav__item">
+        <div className="hidden mr-3 space-x-4 lg:flex nav__item items-center">
           <Link
             href="/join"
-            className="px-6 py-2 text-white bg-red-900 dark:bg-red-950 dark:border-2 dark:border-gray-300 dark:text-gray-300 rounded-md md:ml-5"
+            className="px-6 py-2 rounded-md p-2 shadow-md bg-red-800 text-white dark:shadow-none hover:shadow-none dark:hover:shadow-md shadow-gray-950 dark:hover:shadow-slate-500 dark:shadow-sky-200 dark:bg-red-900 dark:text-gray-200 font-bold transition-all duration-500 md:ml-5"
           >
             Become a Member
           </Link>
-
-          <ThemeChanger />
+          <Disclosure>
+            {({ open }) => (
+              <>
+                {/* <div className="flex flex-wrap items-center justify-between w-auto lg:w-auto border-4 border-red-400"> */}
+                <Disclosure.Button
+                  aria-label="Toggle Menu"
+                  className="p-0 m-0 text-gray-500 rounded-md  hover:text-gray-900   dark:text-gray-900 focus:bg-red-100 focus:text-red-900  focus:outline-none dark:focus:bg-red-800 dark:focus:text-white dark:focus:font-bold "
+                >
+                  <Cog8ToothIcon className="relative w-8 h-8 m-0 p-0  stroke-gray-500 dark:stroke-gray-300  stroke-1 " />
+                </Disclosure.Button>
+                <Transition
+                  enter="duration-200 ease-out"
+                  enterFrom="opacity-0 -translate-y-6"
+                  enterTo="opacity-100 translate-y-0"
+                  leave="duration-300 ease-out"
+                  leaveFrom="opacity-100 translate-y-0"
+                  leaveTo="opacity-0 -translate-y-6"
+                >
+                  <Disclosure.Panel className="absolute mt-9 -ml-10 -left-28 w-60  flex flex-col items-center  p-2  bg bg-white dark:bg-red-950 rounded-xl  z-50 dark:shadow-gray-300 shadow-gray-700 shadow-inner">
+                    <>
+                      <div className="flex flex-row justify-evenly w-full py-2">
+                        Theme:
+                        <ThemeChanger />
+                      </div>
+                      <div className="flex flex-row justify-evenly w-full py-2">
+                        <LoginPage />
+                      </div>
+                    </>
+                  </Disclosure.Panel>
+                </Transition>
+                {/* </div> */}
+              </>
+            )}
+          </Disclosure>
         </div>
       </nav>
     </div>

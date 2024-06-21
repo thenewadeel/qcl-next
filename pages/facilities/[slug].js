@@ -12,17 +12,19 @@ export default function Page() {
   if (index >= 0)
     return (
       <>
-        <Head>
-          <title>{router.query.slug} - Quetta Club Limited</title>
-          <meta name="description" content="Quetta Club Limited" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <Navbar />
-        {/* <hr /> */}
-        <FacilityTemplate data={facilitiesData.objs[index]} />
-        {/* <p>Post: {router.query.slug}</p>; */}
-        {/* <Faq /> */}
-        <Footer />
+        <div className="w-full self-center flex flex-col">
+          <Head>
+            <title>{router.query.slug} - Quetta Club Limited</title>
+            <meta name="description" content="Quetta Club Limited" />
+            <link rel="icon" href="/favicon.ico" />
+          </Head>
+          <Navbar />
+          {/* <hr /> */}
+          <FacilityTemplate data={facilitiesData.objs[index]} />
+          {/* <p>Post: {router.query.slug}</p>; */}
+          {/* <Faq /> */}
+          <Footer />
+        </div>
       </>
     );
   else return <>Invalid slug::{router.query.slug}</>;

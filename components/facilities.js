@@ -18,7 +18,7 @@ const Facilities = () => {
           id="#facilities"
           className="flex flex-col max-lg:flex-col items-center w-full justify-start h-auto md:p-8"
         >
-          <div className="bg-slate-300 shadow-black shadow-lg bg-opacity-80  flex max-lg:flex-col md:p-8 dark:bg-zinc-900 dark:text-gray-300 dark:bg-opacity-90 my-8 gap-10 rounded-xl w-full h-auto">
+          <div className="bg-slate-300 shadow-black shadow-lg bg-opacity-80  flex max-lg:flex-col md:p-8 dark:bg-zinc-900 dark:bg-opacity-80 dark:text-gray-300 my-8 gap-10 rounded-xl w-full h-auto">
             <div className="lg:max-w-md mx-auto flex flex-col  md:space-y-8">
               <h2 className="text-3xl text-center font-extrabold mb-4  p-4 md:text-left md:px-0">
                 Discover Our Member Exclusive Facilities

@@ -27,7 +27,8 @@ import CtaBanner from "../components/ctaBanner";
 
 const Home = () => {
   return (
-    <>
+    // <>
+    <div className="w-full self-center flex flex-col">
       <Head>
         <title>Quetta Club Limited</title>
         <meta name="description" content="Quetta Club Limited" />
@@ -80,7 +81,8 @@ const Home = () => {
       <CtaBanner />
       <Footer />
       {/* <PopupWidget /> */}
-    </>
+      {/* </> */}
+    </div>
   );
 };
 
