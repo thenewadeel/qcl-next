@@ -6,10 +6,10 @@ const Contact = (props) => {
   const { data } = props;
   return (
     <>
-      <Container className=" ">
+      <Container className="">
         <div
-          name="contact"
-          className="grid md:grid-cols-2 gap-16 items-center relative overflow-hidden p-10 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-3xl max-w-7xl mx-auto bg-slate-100 text-gray-900 my-6 before:absolute before:right-0 before:w-[45%] before:bg-indigo-200 dark:before:bg-red-950 before:h-full max-md:before:hidden shadow-zinc-950 dark:bg-slate-950 dark:text-gray-300 dark:shadow-slate-600"
+          // name="contact"
+          className="grid md:grid-cols-2 gap-16 items-center relative overflow-hidden p-10 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-3xl max-w-7xl mx-auto bg-slate-100 text-gray-900  before:absolute before:right-0 before:w-[45%] before:bg-indigo-200 dark:before:bg-red-950 before:h-full max-md:before:hidden shadow-zinc-950 dark:bg-slate-950 dark:text-gray-300 dark:shadow-slate-600"
         >
           <div>
             <h2 className="text-3xl font-extrabold">Get In Touch</h2>
@@ -17,7 +17,7 @@ const Contact = (props) => {
               Have a specific inquiry or looking to explore new opportunities? Our experienced team is ready to engage
               with you.
             </p>
-            <form netlify="true">
+            <form netlify="true" name="contactForm">
               <div className="space-y-4 mt-8 ">
                 <input
                   type="text"
@@ -50,7 +50,7 @@ const Contact = (props) => {
               </div>
               <button
                 type="submit"
-                className="mt-8 flex items-center justify-center text-sm w-full px-4 py-2.5 font-semibold hover:bg-red-950 outline-none border-2 focus:border-gray-950  text-white bg-red-900 dark:bg-red-950 dark:border-2 dark:border-gray-300 dark:text-gray-300 rounded-md "
+                className="mt-8 flex items-center justify-center text-sm w-full px-4 py-2.5 font-semibold hover:bg-red-950 outline-none border-2 focus:border-gray-950  text-white bg-red-900 dark:bg-red-950 dark:border-2 dark:border-gray-300 dark:text-gray-300 rounded-md w-full p-2 mt-3 text-center rounded-md shadow-md bg-red-800 text-white dark:shadow-none hover:shadow-none dark:hover:shadow-md shadow-gray-950 dark:hover:shadow-slate-500 dark:shadow-sky-200 dark:bg-red-900 dark:text-gray-200 font-bold transition-all duration-500 lg:ml-5"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

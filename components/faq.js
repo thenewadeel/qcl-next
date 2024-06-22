@@ -26,7 +26,7 @@ const Faq = (props) => {
     <Container className="!p-0">
       <div className="w-full max-w-2xl p-2 mx-auto rounded-2xl">
         {faqdata.map((item, index) => (
-          <div key={item.question} className="mb-5">
+          <div key={item.question} className="mb-5 shadow-md shadow-slate-500 dark:shadow-slate-700 rounded-md">
             <Disclosure>
               {({ open }) => (
                 <>

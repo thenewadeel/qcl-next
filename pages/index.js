@@ -37,15 +37,15 @@ const Home = () => {
       <Navbar />
       <Banner1 />
       <hr />
-      <div name="history">
+      <div name="history" className="pt-12">
         <SectionTitle pretitle="History" title="Through Time"></SectionTitle>
         <History />
       </div>
-      <div name="facilities">
+      <div name="facilities" className="pt-12">
         <SectionTitle pretitle="Facilities" title="Our Facilities"></SectionTitle>
         <Facilities />
       </div>
-      <div name="gallery">
+      <div name="gallery" className="pt-12">
         <SectionTitle pretitle="Gallery" title="A Window through Time">
           Our vibrant community thrives on a diverse range of activities, catering to a multitude of interests.
         </SectionTitle>
@@ -73,7 +73,12 @@ const Home = () => {
       </SectionTitle>
       <Faq /> */}
       <Cta />
-      <Contact />
+      <div name="contact" className="pt-12 h-screen">
+        <SectionTitle pretitle="Contact Us" title=" ">
+          Learn about the club & community
+        </SectionTitle>
+        <Contact />
+      </div>
 
       {/* <SplideContent />
       <SplideContentOver />
