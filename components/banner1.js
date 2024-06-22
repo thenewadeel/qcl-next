@@ -12,7 +12,7 @@ const Banner1 = (props) => {
           <img
             src="/img/qcl watermark.png"
             alt=""
-            className="shadowfilter self-center rounded-xl rounded-t-full bg-black bg-opacity-40 border-4 border-white hover:bg-opacity-100"
+            className="shadowfilter self-center rounded-xl rounded-t-full bg-black bg-opacity-40 border-4 border-white backdrop-blur-md hover:backdrop-blur-0 transition-all duration-500"
           />
           {/* <div className="max-w-2xl mb-8"></div> */}
           <div className="text-xl text-center text-gray-900 ">

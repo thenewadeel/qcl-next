@@ -60,7 +60,7 @@ const Navbar = () => {
                       <ThemeChanger />
                     </div>
                     {navigation.map((item, index) => (
-                      <>
+                      <div className="flex flex-row items-center justify-start w-1/2">
                         <Link
                           key={index}
                           href={"/#" + link_stubs[index]}
@@ -76,9 +76,9 @@ const Navbar = () => {
                                 {/* <div className="flex flex-wrap items-center justify-between w-full lg:w-auto"> */}
                                 <Disclosure.Button
                                   aria-label="Toggle Menu"
-                                  className="px-2  ml-auto w-full h-4 text-gray-500 rounded-md  hover:text-gray-900 flex flex-row items-center"
+                                  className="p-0  ml-0 w-full h-auto text-gray-500 rounded-md  hover:text-gray-900 flex flex-row items-center"
                                 >
-                                  <ArrowDownIcon className="w-4 -mt-0 h-full  stroke-gray-300 m-0 p-0 stroke-2" />
+                                  <ArrowRightIcon className="w-4 -mt-0 h-full  stroke-slate-500 m-0 p-0 stroke-2" />
                                   {/* <ChevronDownIcon className="w-4 -mt-0 h-full  stroke-gray-300 m-0 p-0 stroke-2 group-data-[open]:rotate-180" /> */}
                                 </Disclosure.Button>
                                 <Transition
@@ -116,11 +116,11 @@ const Navbar = () => {
                             )}
                           </Disclosure>
                         )}
-                      </>
+                      </div>
                     ))}
                     <Link
                       href="/join"
-                      className="w-full p-2 mt-3 text-center text-white bg-red-900 border-2 dark:border-white dark:text-gray-300 rounded-lg lg:ml-5"
+                      className="w-full p-2 mt-3 text-center rounded-md shadow-md bg-red-800 text-white dark:shadow-none hover:shadow-none dark:hover:shadow-md shadow-gray-950 dark:hover:shadow-slate-500 dark:shadow-sky-200 dark:bg-red-900 dark:text-gray-200 font-bold transition-all duration-500 lg:ml-5"
                     >
                       Become a Member
                     </Link>
@@ -164,7 +164,7 @@ const Navbar = () => {
                           leaveFrom="opacity-100 translate-y-0"
                           leaveTo="opacity-0 -translate-y-6"
                         >
-                          <Disclosure.Panel className="absolute top-14 -left-28 flex flex-col w-auto p-2  bg bg-white dark:bg-red-950 rounded-b-xl  z-50 dark:shadow-gray-300 shadow-gray-700 shadow-lg">
+                          <Disclosure.Panel className="absolute top-14 -left-28 flex flex-col w-auto p-2  bg bg-white dark:bg-red-950 rounded-b-xl  z-50 dark:shadow-gray-300 shadow-gray-700 shadow-md">
                             <>
                               {Object.keys(facilitiesMenuGp).map((item, index) => (
                                 <div className="w-full  text-gray-500 rounded-md dark:text-gray-300 hover:text-gray-900   focus:bg-red-100 dark:focus:bg-red-800 focus:outline-none dark:focus:text-yellow-500 focus:font-bold  text-start">
@@ -221,7 +221,7 @@ const Navbar = () => {
                   leaveFrom="opacity-100 translate-y-0"
                   leaveTo="opacity-0 -translate-y-6"
                 >
-                  <Disclosure.Panel className="absolute mt-9 -ml-10 -left-28 w-60  flex flex-col items-center  p-2  bg bg-white dark:bg-red-950 rounded-xl  z-50 dark:shadow-gray-300 shadow-gray-700 shadow-inner">
+                  <Disclosure.Panel className="absolute mt-9 -ml-10 -left-28 w-60  flex flex-col items-center  p-2  bg bg-white dark:bg-red-950 rounded-xl z-50 dark:shadow-gray-300 shadow-gray-700 shadow-md">
                     <>
                       <div className="flex flex-row justify-evenly w-full py-2">
                         Theme:
