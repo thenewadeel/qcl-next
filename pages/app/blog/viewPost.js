@@ -1,9 +1,9 @@
 // "use client";
 import { useState, useEffect } from "react";
-import { account, ID, database, storage, ImageGravity, ImageFormat } from "./appwrite";
+import { AW_Settings, account, ID, database, storage, ImageGravity, ImageFormat } from "../appwrite";
 
-const ViewPost = () => {
-  const postId = "667533a4000fb590840f";
+const ViewPost = (props) => {
+  const postId = props.postId || "667533a4000fb590840f";
   const [heading, setHeading] = useState("");
   const [subtitle, setSubtitle] = useState("");
   const [paragraphs, setParagraphs] = useState([]);
@@ -14,11 +14,12 @@ const ViewPost = () => {
 
   const fetchPost = async () => {
     const result = await database.getDocument(
-      "Test", // '<DATABASE_ID>', // databaseId
-      "6674a0cd00056050e71e", // '<COLLECTION_ID>', // collectionId
+      AW_Settings.DB, // '<DATABASE_ID>', // databaseId
+      AW_Settings.blog_Collection, // '<COLLECTION_ID>', // collectionId
       postId, //'<DOCUMENT_ID>', // documentId
       [] // queries (optional)
     );
+    console.log({ result });
     setHeading(result.heading);
     setSubtitle(result.subtitle);
     setParagraphs(result.paragraphs);
@@ -30,7 +31,7 @@ const ViewPost = () => {
 
   const getPhotoHrefFromId = async (id) => {
     const result = await storage.getFilePreview(
-      "6674af5a0020238856ec", // '<BUCKET_ID>', // bucketId
+      AW_Settings.blog_Bucket, // '<BUCKET_ID>', // bucketId
       id // '<FILE_ID>' // fileId
       // 0, // width (optional)
       // 0, // height (optional)
@@ -59,13 +60,6 @@ const ViewPost = () => {
     });
   }, []);
 
-  useEffect(() => {
-    console.log({ photos_urls });
-    // photos_urls.map((u) => {
-    //   setPhotosHrefs([...photos_hrefs, getPhotoHrefFromId(u)]);
-    // });
-  }, []);
-
   return (
     <div className="flex flex-col self-center items-center border-2 border-red-600">
       {/* <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} /> */}
@@ -85,7 +79,7 @@ const ViewPost = () => {
           <div key={index} className="border-2 border-red-500">
             <div className="text-lg">{photos_urls[index]}</div>
             <div className="text-lg">{photos_hrefs[index]}</div>
-            <img src={photos_hrefs[index]} />
+            <img src={photos_hrefs[index]} className="max-w-lg max-h-64" />
             <div className="text-base">{photo_caption}</div>
           </div>
         ))}

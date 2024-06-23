@@ -1,6 +1,6 @@
 // "use client";
 import { useState } from "react";
-import { account, ID, database, storage } from "./appwrite";
+import { AW_Settings, account, ID, database, storage } from "../appwrite";
 
 const CreatePost = () => {
   const [heading, setHeading] = useState("");
@@ -12,8 +12,8 @@ const CreatePost = () => {
 
   const submitPost = async () => {
     const result = await database.createDocument(
-      "Test", // '<DATABASE_ID>', // databaseId
-      "6674a0cd00056050e71e", // '<COLLECTION_ID>', // collectionId
+      AW_Settings.DB, // '<DATABASE_ID>', // databaseId
+      AW_Settings.blog_Collection, // '<COLLECTION_ID>', // collectionId
       ID.unique(), //'<DOCUMENT_ID>', // documentId
       { heading, subtitle, paragraphs, photos_urls, photos_captions, created_at } // data
       // ["read("any")"] // permissions (optional)
@@ -24,7 +24,7 @@ const CreatePost = () => {
 
   const submitPhotos = async (files) => {
     const result = await storage.createFile(
-      "6674af5a0020238856ec", //'<BUCKET_ID>', // bucketId
+      AW_Settings.blog_Bucket, //'<BUCKET_ID>', // bucketId
       ID.unique(), //'<FILE_ID>', // fileId
       files[0] // file
       // ["read("any")"] // permissions (optional)
