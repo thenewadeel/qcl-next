@@ -24,6 +24,7 @@ import SplideContentCarousal from "../components/splideContentCarousal";
 import contactImage from "../public/img/contact.jpg";
 import SplideContentOver from "../components/splideContentOver";
 import CtaBanner from "../components/ctaBanner";
+import ListPosts from "./app/listPosts";
 
 const Home = () => {
   return (
@@ -49,8 +50,15 @@ const Home = () => {
         <SectionTitle pretitle="Gallery" title="A Window through Time">
           Our vibrant community thrives on a diverse range of activities, catering to a multitude of interests.
         </SectionTitle>
+        <SplideCarousal />
       </div>
-      <SplideCarousal />
+      <div name="blog" className="pt-12">
+        <SectionTitle pretitle="Events" title="Past and Upcoming">
+          Stay updated on our exciting events and activities. Whether it's a golf tournament, a charity event, or a
+          social gathering, we hope to see you there.
+        </SectionTitle>
+        <ListPosts />
+      </div>
       {/* <SectionTitle pretitle="Nextly Benefits" title=" Why should you use this landing page">
         Nextly is a free landing page & marketing website template for startups and indie projects. Its built with
         Next.js & TailwindCSS. And its completely open-source.
@@ -72,17 +80,19 @@ const Home = () => {
         requests.
       </SectionTitle>
       <Faq /> */}
-      <Cta />
       <div name="contact" className="pt-12 h-screen">
         <SectionTitle pretitle="Contact Us" title=" ">
           Learn about the club & community
         </SectionTitle>
         <Contact />
       </div>
+      <div className="w-full h-40  space-y-12"></div>
+      <Cta />
 
       {/* <SplideContent />
       <SplideContentOver />
-      <SplideContentCarousal /> */}
+    <SplideContentCarousal /> */}
+      <div className="w-full h-40  space-y-24"></div>
       <CtaBanner />
       <Footer />
       {/* <PopupWidget /> */}

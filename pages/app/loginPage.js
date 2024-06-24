@@ -15,6 +15,7 @@ import {
   StarIcon,
   PowerIcon,
 } from "@heroicons/react/24/solid";
+import Link from "next/link";
 
 const LoginPage = () => {
   const [loggedInUser, setLoggedInUser] = useState(null);
@@ -54,7 +55,7 @@ const LoginPage = () => {
 
   if (loggedInUser) {
     return (
-      <div>
+      <div className="flex flex-col items-center">
         <div className=" flex flex-row items-center">
           {/* <img className="w-16 h-16 rounded-full mr-4" src={loggedInUser.picture} /> */}
           <div className="text-slate-900 bg-lime-100 dark:text-white dark:bg-orange-900 border-4 border-slate-400 dark:border-slate-200 rounded-full  w-10 h-10 text-center font-bold font-serif text-xl p-0 align-middle items-center">
@@ -70,6 +71,12 @@ const LoginPage = () => {
             </button>
           </div> */}
         </div>
+        <Link
+          href="/app/blog/createPost"
+          className="mt-4 px-6 py-2 rounded-md p-2 shadow-md bg-red-800 text-white dark:shadow-none hover:shadow-none dark:hover:shadow-md shadow-gray-950 dark:hover:shadow-slate-500 dark:shadow-sky-200 dark:bg-red-900 dark:text-gray-200 font-bold transition-all duration-500 md:ml-5"
+        >
+          Create Post
+        </Link>
       </div>
     );
   }

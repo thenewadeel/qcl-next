@@ -1,17 +1,16 @@
 // "use client";
 import { useState, useEffect } from "react";
 import { AW_Settings, account, ID, database, storage, ImageGravity, ImageFormat } from "../appwrite";
-import SectionTitle from "../../../components/sectionTitle";
+import Link from "next/link";
 
-const ViewPost = (props) => {
-  let maxIndex;
+const ViewPostThumb = (props) => {
   const postId = props.postId || "667533a4000fb590840f";
   const [heading, setHeading] = useState("");
   const [subtitle, setSubtitle] = useState("");
-  const [paragraphs, setParagraphs] = useState([]);
+  // const [paragraphs, setParagraphs] = useState([]);
   const [photos_urls, setPhotosUrls] = useState([]);
   const [photos_hrefs, setPhotosHrefs] = useState([]);
-  const [photos_captions, setPhotosCaptions] = useState([]);
+  // const [photos_captions, setPhotosCaptions] = useState([]);
   const [created_at, setCreatedAt] = useState(new Date());
 
   const fetchPost = async () => {
@@ -24,9 +23,9 @@ const ViewPost = (props) => {
     console.log({ result });
     setHeading(result.heading);
     setSubtitle(result.subtitle);
-    setParagraphs(result.paragraphs);
+    // setParagraphs(result.paragraphs);
     setPhotosUrls(result.photos_urls);
-    setPhotosCaptions(result.photos_captions);
+    // setPhotosCaptions(result.photos_captions);
     setCreatedAt(result.created_at);
     return result;
   };
@@ -63,39 +62,30 @@ const ViewPost = (props) => {
   }, []);
 
   return (
-    <div
-      name=""
-      className="m-4 mt-14 border-t-8 border-l-8  border-red-50 dark:border-red-950 container rounded-lg p-2 xl:px-0 bg-sky-500 bg-opacity-5 shadow-lg self-center"
-    >
-      <SectionTitle pretitle={subtitle} title={heading}>
-        {new Date(created_at).toDateString()}
-      </SectionTitle>
-      <div className="flex flex-col items-center ">
-        <div>
-          {paragraphs.map((paragraph, index) => (
-            <div key={index} className={`${index % 2 === 0 ? "text-" : "text-"}`}>
-              <div class=" flex flex-col items-center rounded-lg shadow-lg p-8 max-w-6xl mx-auto font-[sans-serif] text-xl/loose font-bold text-gray-800 dark:text-gray-200 my-20 text-justify drop indent-12">
-                {paragraph}
-              </div>
-              {photos_hrefs[index] && (
-                // <div className={`${index % 2 === 0 ? "text-" : "text-"}`}>
-                <div className="flex flex-col rounded-lg shadow-lg  shadow-gray-950 p-4 max-w-3xl mx-8 bg-teal-500 bg-opacity-10 self-center ">
-                  <img
-                    src={photos_hrefs[index]}
-                    className={`${index % 2 === 0 ? "float-right" : "float-left"}` + "  "}
-                  />
-                  <div className=" py-2 text-lg text-center bg-zinc-200  text-slate-950 font-bold rounded-md m-4 shadow-inner shadow-slate-400 px-14">
-                    {photos_captions[index]}
-                  </div>
-                </div>
-                // </div>
-              )}
-            </div>
-          ))}
+    <Link href={`/app/blog/${postId}`} className="">
+      <div class="cursor-pointer  overflow-hidden group max-w-120 min-w-[264px]  rounded-lg m-4 bg-slate-100 dark:bg-red-950 dark:bg-opacity-20 dark:hover:bg-opacity-80  hover:shadow-md dark:shadow-gray-500">
+        <div class="relative overflow-hidden">
+          <img
+            src={photos_hrefs[0]}
+            alt={heading}
+            class="w-full h-60 object-cover group-hover:scale-125 transition-all duration-300"
+          />
+          <div class="px-4 py-2.5 text-white dark:text-gray-100 text-sm tracking-wider bg-red-800 absolute bottom-0 right-0">
+            {new Date(created_at).toDateString()}{" "}
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-[#333] dark:text-gray-100">{heading}</h3>
+          <button
+            type="button"
+            class="px-4 py-2 mt-6 rounded text-white text-sm tracking-wider border-none outline-none bg-red-800 hover:bg-red-950"
+          >
+            Read More
+          </button>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
-export default ViewPost;
+export default ViewPostThumb;
