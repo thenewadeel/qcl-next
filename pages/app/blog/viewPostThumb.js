@@ -63,22 +63,22 @@ const ViewPostThumb = (props) => {
 
   return (
     <Link href={`/app/blog/${postId}`} className="">
-      <div class="cursor-pointer  overflow-hidden group max-w-120 min-w-[264px]  rounded-lg m-4 bg-slate-100 dark:bg-red-950 dark:bg-opacity-20 dark:hover:bg-opacity-80  hover:shadow-md dark:shadow-gray-500">
-        <div class="relative overflow-hidden">
+      <div className="cursor-pointer  overflow-hidden group max-w-120 min-w-[264px]  rounded-lg m-4 bg-slate-100 dark:bg-red-950 dark:bg-opacity-20 dark:hover:bg-opacity-80  hover:shadow-md dark:shadow-gray-500">
+        <div className="relative overflow-hidden">
           <img
             src={photos_hrefs[0]}
             alt={heading}
-            class="w-full h-60 object-cover group-hover:scale-125 transition-all duration-300"
+            className="w-full h-60 object-cover group-hover:scale-125 transition-all duration-300"
           />
-          <div class="px-4 py-2.5 text-white dark:text-gray-100 text-sm tracking-wider bg-red-800 absolute bottom-0 right-0">
+          <div className="px-4 py-2.5 text-white dark:text-gray-100 text-sm tracking-wider bg-red-800 absolute bottom-0 right-0">
             {new Date(created_at).toDateString()}{" "}
           </div>
         </div>
-        <div class="p-6">
-          <h3 class="text-xl font-bold text-[#333] dark:text-gray-100">{heading}</h3>
+        <div className="p-6">
+          <h3 className="text-xl font-bold text-[#333] dark:text-gray-100">{heading}</h3>
           <button
             type="button"
-            class="px-4 py-2 mt-6 rounded text-white text-sm tracking-wider border-none outline-none bg-red-800 hover:bg-red-950"
+            className="px-4 py-2 mt-6 rounded text-white text-sm tracking-wider border-none outline-none bg-red-800 hover:bg-red-950"
           >
             Read More
           </button>

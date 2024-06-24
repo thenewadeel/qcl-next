@@ -60,7 +60,7 @@ const Navbar = () => {
                       <ThemeChanger />
                     </div>
                     {navigation.map((item, index) => (
-                      <div className="flex flex-row items-center justify-start w-1/2">
+                      <div className="flex flex-row items-center justify-start w-1/2" key={index}>
                         <Link
                           key={index}
                           href={"/#" + link_stubs[index]}
@@ -91,14 +91,17 @@ const Navbar = () => {
                                 >
                                   <Disclosure.Panel className="relative flex   flex-col pl-8 bg bg-white dark:bg-red-950 rounded-md  z-50 dark:shadow-orange-900 shadow-gray-700 shadow-[inset_0px_0px_16px] py-4">
                                     <>
-                                      {Object.keys(facilitiesMenuGp).map((item, index) => (
-                                        <div className="w-full  text-gray-500 rounded-md dark:text-gray-300 hover:text-gray-900   focus:bg-red-100 dark:focus:bg-red-800 focus:outline-none dark:focus:text-yellow-500 focus:font-bold  text-start leading-snug">
+                                      {Object.keys(facilitiesMenuGp).map((item, index1) => (
+                                        <div
+                                          key={index1}
+                                          className="w-full  text-gray-500 rounded-md dark:text-gray-300 hover:text-gray-900   focus:bg-red-100 dark:focus:bg-red-800 focus:outline-none dark:focus:text-yellow-500 focus:font-bold  text-start leading-snug"
+                                        >
                                           <span className="text-sm font-semibold dark:text-orange-200 ">{item}</span>
                                           {/* <ArrowRightIcon className="w-6 h-full  stroke-white m-0 p-0 " /> */}
                                           <div className="p-0 m-0 ">
-                                            {facilitiesMenuGp[item].map((linkText, index) => (
+                                            {facilitiesMenuGp[item].map((linkText, index2) => (
                                               <Link
-                                                key={index}
+                                                key={index2}
                                                 href={"/facilities/" + linkText}
                                                 className="dark:hover:bg-red-900  block whitespace-nowrap text-md rounded-lg  hover:font-bold text-left pl-8"
                                               >
@@ -167,7 +170,10 @@ const Navbar = () => {
                           <Disclosure.Panel className="absolute top-14 -left-28 flex flex-col w-auto p-2  bg bg-white dark:bg-red-950 rounded-b-xl  z-50 dark:shadow-gray-300 shadow-gray-700 shadow-md">
                             <>
                               {Object.keys(facilitiesMenuGp).map((item, index) => (
-                                <div className="w-full  text-gray-500 rounded-md dark:text-gray-300 hover:text-gray-900   focus:bg-red-100 dark:focus:bg-red-800 focus:outline-none dark:focus:text-yellow-500 focus:font-bold  text-start">
+                                <div
+                                  key={index}
+                                  className="w-full  text-gray-500 rounded-md dark:text-gray-300 hover:text-gray-900   focus:bg-red-100 dark:focus:bg-red-800 focus:outline-none dark:focus:text-yellow-500 focus:font-bold  text-start"
+                                >
                                   <span className="text-sm font-semibold">{item}</span>
                                   {/* <ArrowRightIcon className="w-6 h-full  stroke-white m-0 p-0 " /> */}
                                   <div className="py-2 mx-4 ">

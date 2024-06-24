@@ -42,7 +42,7 @@ const History = () => {
             </div>
           </div>
           {paras.map((para, index) => (
-            <div className="flex flex-col">
+            <div className="flex flex-col" key={index}>
               <h3 className="m-2 text-2xl px-8 font-extrabold  py-2 rounded-lg bg-opacity-70  text-gray-200 dark:text-yellow-500 bg-black dark:bg-stone-950 text-start dark:bg-opacity-80 md:max-w-md w-max shadow-[inset_0px_0px_9px]">
                 {para.heading}
               </h3>

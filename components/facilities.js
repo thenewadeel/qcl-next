@@ -14,7 +14,7 @@ const Facilities = () => {
       >
         <div
           name="facilities"
-          // data-aos="fade-up"
+          data-aos="fade-up"
           id="#facilities"
           className="flex flex-col max-lg:flex-col items-center w-full justify-start h-auto md:p-8"
         >
@@ -31,30 +31,31 @@ const Facilities = () => {
             </div>
             <div className="">
               {Object.keys(facilitiesData.facilitiesMenuGp).map((facilityGpName, index) => (
-                <>
-                  <div className="w-full bg-gray-400 dark:bg-stone-500 dark:bg-opacity-30 bg-opacity-30 md:p-4 py-4  text-center text-2xl font-bold rounded-xl my-2 p-2">
-                    {facilityGpName}
-                    <div className="space-y-2">
-                      {" "}
-                      <br />
-                    </div>
-                    <div className=" grid md:grid-cols-2 gap-4 max-md:max-w-lg mx-auto">
-                      {facilitiesData.facilitiesMenuGp[facilityGpName].map((facility, index) => (
-                        <>
-                          {/* {index % 3 == 0 && "pop"} */}
-                          <Card
-                            data={{
-                              heading: facility,
-                              text: facilitiesData.objs[facilitiesData.names.indexOf(facility)].sectionData.desc,
-                              link: `/facilities/${facility}`,
-                            }}
-                            key={facilitiesData.names.indexOf(facility)}
-                          />
-                        </>
-                      ))}
-                    </div>
+                <div
+                  key={index}
+                  className="w-full bg-gray-400 dark:bg-stone-500 dark:bg-opacity-30 bg-opacity-30 md:p-4 py-4  text-center text-2xl font-bold rounded-xl my-2 p-2"
+                >
+                  {facilityGpName}
+                  <div className="space-y-2">
+                    {" "}
+                    <br />
                   </div>
-                </>
+                  <div className=" grid md:grid-cols-2 gap-4 max-md:max-w-lg mx-auto">
+                    {facilitiesData.facilitiesMenuGp[facilityGpName].map((facility, index) => (
+                      <div key={index}>
+                        {/* {index % 3 == 0 && "pop"} */}
+                        <Card
+                          data={{
+                            heading: facility,
+                            text: facilitiesData.objs[facilitiesData.names.indexOf(facility)].sectionData.desc,
+                            link: `/facilities/${facility}`,
+                          }}
+                          key={index}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
               ))}
             </div>
           </div>

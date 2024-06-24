@@ -72,11 +72,13 @@ const ViewPost = (props) => {
       </SectionTitle>
       <div className="flex flex-col items-center ">
         <div>
-          {paragraphs.map((paragraph, index) => (
+          {photos_hrefs.map((photo_href, index) => (
             <div key={index} className={`${index % 2 === 0 ? "text-" : "text-"}`}>
-              <div class=" flex flex-col items-center rounded-lg shadow-lg p-8 max-w-6xl mx-auto font-[sans-serif] text-xl/loose font-bold text-gray-800 dark:text-gray-200 my-20 text-justify drop indent-12">
-                {paragraph}
-              </div>
+              {paragraphs[index] && (
+                <div className=" flex flex-col items-center rounded-lg shadow-lg p-8 max-w-6xl mx-auto font-[sans-serif] text-xl/loose font-bold text-gray-800 dark:text-gray-200 my-20 text-justify drop indent-12">
+                  {paragraphs[index]}
+                </div>
+              )}
               {photos_hrefs[index] && (
                 // <div className={`${index % 2 === 0 ? "text-" : "text-"}`}>
                 <div className="flex flex-col rounded-lg shadow-lg  shadow-gray-200 p-4 max-w-3xl mx-8 bg-slate-200 bg-opacity-5 self-center ">
@@ -84,9 +86,11 @@ const ViewPost = (props) => {
                     src={photos_hrefs[index]}
                     className={`${index % 2 === 0 ? "float-right" : "float-left"}` + "  "}
                   />
-                  <div className=" py-2 text-lg text-center bg-zinc-200  text-slate-950 font-bold rounded-md m-4 shadow-inner shadow-slate-400 px-14">
-                    {photos_captions[index]}
-                  </div>
+                  {photos_captions[index] && (
+                    <div className=" py-2 text-lg text-center bg-zinc-200  text-slate-950 font-bold rounded-md m-4 shadow-inner shadow-slate-400 px-14">
+                      {photos_captions[index]}
+                    </div>
+                  )}
                 </div>
                 // </div>
               )}
