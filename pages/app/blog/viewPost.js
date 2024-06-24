@@ -65,7 +65,7 @@ const ViewPost = (props) => {
   return (
     <div
       name=""
-      className="m-4 mt-14 border-t-8 border-l-8  border-red-50 dark:border-red-950 container rounded-lg p-2 xl:px-0 bg-sky-500 bg-opacity-5 shadow-lg self-center"
+      className="m-4 mt-14 border-t-8 border-l-8  border-red-50 dark:border-red-950 container rounded-lg p-2 xl:px-0 bg-slate-200 bg-opacity-5 shadow-lg self-center pb-20"
     >
       <SectionTitle pretitle={subtitle} title={heading}>
         {new Date(created_at).toDateString()}
@@ -79,7 +79,7 @@ const ViewPost = (props) => {
               </div>
               {photos_hrefs[index] && (
                 // <div className={`${index % 2 === 0 ? "text-" : "text-"}`}>
-                <div className="flex flex-col rounded-lg shadow-lg  shadow-gray-950 p-4 max-w-3xl mx-8 bg-teal-500 bg-opacity-10 self-center ">
+                <div className="flex flex-col rounded-lg shadow-lg  shadow-gray-200 p-4 max-w-3xl mx-8 bg-slate-200 bg-opacity-5 self-center ">
                   <img
                     src={photos_hrefs[index]}
                     className={`${index % 2 === 0 ? "float-right" : "float-left"}` + "  "}
