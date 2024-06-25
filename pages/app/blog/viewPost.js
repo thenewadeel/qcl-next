@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { AW_Settings, account, ID, database, storage, ImageGravity, ImageFormat } from "../appwrite";
 import SectionTitle from "../../../components/sectionTitle";
+import CSSCarousal from "../../../components/cssCarousal";
 
 const ViewPost = (props) => {
   let maxIndex;
@@ -65,37 +66,23 @@ const ViewPost = (props) => {
   return (
     <div
       name=""
-      className="m-4 mt-14 border-t-8 border-l-8  border-red-50 dark:border-red-950 container rounded-lg p-2 xl:px-0 bg-slate-200 bg-opacity-5 shadow-lg self-center pb-20"
+      className="m-4 mt-14 border-t-8 border-l-8  border-red-50 dark:border-red-950 container rounded-lg p-2 xl:px-0 bg-slate-200 bg-opacity-5 shadow-lg self-center pb-20 overflow-hidden"
     >
       <SectionTitle pretitle={subtitle} title={heading}>
         {new Date(created_at).toDateString()}
       </SectionTitle>
       <div className="flex flex-col items-center ">
-        <div>
-          {photos_hrefs.map((photo_href, index) => (
+        <div className="">
+          {paragraphs.map((paragraph, index) => (
             <div key={index} className={`${index % 2 === 0 ? "text-" : "text-"}`}>
-              {paragraphs[index] && (
+              {paragraph && (
                 <div className=" flex flex-col items-center rounded-lg shadow-lg p-8 max-w-6xl mx-auto font-[sans-serif] text-xl/loose font-bold text-gray-800 dark:text-gray-200 my-20 text-justify drop indent-12">
-                  {paragraphs[index]}
+                  {paragraph}
                 </div>
-              )}
-              {photos_hrefs[index] && (
-                // <div className={`${index % 2 === 0 ? "text-" : "text-"}`}>
-                <div className="flex flex-col rounded-lg shadow-lg  shadow-gray-200 p-4 max-w-3xl mx-8 bg-slate-200 bg-opacity-5 self-center ">
-                  <img
-                    src={photos_hrefs[index]}
-                    className={`${index % 2 === 0 ? "float-right" : "float-left"}` + "  "}
-                  />
-                  {photos_captions[index] && (
-                    <div className=" py-2 text-lg text-center bg-zinc-200  text-slate-950 font-bold rounded-md m-4 shadow-inner shadow-slate-400 px-14">
-                      {photos_captions[index]}
-                    </div>
-                  )}
-                </div>
-                // </div>
               )}
             </div>
           ))}
+          <CSSCarousal images={photos_hrefs} />
         </div>
       </div>
     </div>

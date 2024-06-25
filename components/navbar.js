@@ -60,11 +60,11 @@ const Navbar = () => {
                       <ThemeChanger />
                     </div>
                     {navigation.map((item, index) => (
-                      <div className="flex flex-row items-center justify-start w-1/2" key={index}>
+                      <div className="flex flex-row items-start justify-start" key={index}>
                         <Link
                           key={index}
                           href={"/#" + link_stubs[index]}
-                          className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-red-500  focus:text-red-500 focus:bg-red-100 dark:focus:bg-red-800 focus:outline-none dark:focus:text-yellow-500 focus:font-bold"
+                          className="w-max px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-red-500  focus:text-red-500 focus:bg-red-100 dark:focus:bg-red-800 focus:outline-none dark:focus:text-yellow-500 focus:font-bold"
                         >
                           {item}
                         </Link>
@@ -76,7 +76,7 @@ const Navbar = () => {
                                 {/* <div className="flex flex-wrap items-center justify-between w-full lg:w-auto"> */}
                                 <Disclosure.Button
                                   aria-label="Toggle Menu"
-                                  className="p-0  ml-0 w-full h-auto text-gray-500 rounded-md  hover:text-gray-900 flex flex-row items-center"
+                                  className="p-0  ml-0 w-min h-auto text-gray-500 rounded-md  hover:text-gray-900 flex flex-row items-center self-start mt-3"
                                 >
                                   <ArrowRightIcon className="w-4 -mt-0 h-full  stroke-slate-500 m-0 p-0 stroke-2" />
                                   {/* <ChevronDownIcon className="w-4 -mt-0 h-full  stroke-gray-300 m-0 p-0 stroke-2 group-data-[open]:rotate-180" /> */}
@@ -85,11 +85,11 @@ const Navbar = () => {
                                   enter="duration-500 ease-out"
                                   enterFrom="opacity-0 -translate-x-6"
                                   enterTo="opacity-100 translate-x-0"
-                                  leave="duration-1000 ease-out"
-                                  leaveFrom="opacity-100 translate-y-0"
-                                  leaveTo="opacity-0 -translate-y-6"
+                                  leave="duration-300 ease-out"
+                                  leaveFrom="opacity-100 translate-x-0"
+                                  leaveTo="opacity-0 -translate-x-6"
                                 >
-                                  <Disclosure.Panel className="relative flex   flex-col pl-8 bg bg-white dark:bg-red-950 rounded-md  z-50 dark:shadow-orange-900 shadow-gray-700 shadow-[inset_0px_0px_16px] py-4">
+                                  <Disclosure.Panel className="relative flex   flex-col px-4 w-full grow bg-white dark:bg-red-950 rounded-md  z-50 dark:shadow-orange-900 shadow-gray-700 shadow-[inset_0px_0px_16px] py-4 border-4 border-white">
                                     <>
                                       {Object.keys(facilitiesMenuGp).map((item, index1) => (
                                         <div
@@ -176,7 +176,7 @@ const Navbar = () => {
                                 >
                                   <span className="text-sm font-semibold">{item}</span>
                                   {/* <ArrowRightIcon className="w-6 h-full  stroke-white m-0 p-0 " /> */}
-                                  <div className="py-2 mx-4 ">
+                                  <div className="py-2 mx-4">
                                     {facilitiesMenuGp[item].map((linkText, index) => (
                                       <Link
                                         key={index}

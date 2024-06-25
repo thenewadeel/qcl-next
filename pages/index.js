@@ -25,6 +25,7 @@ import contactImage from "../public/img/contact.jpg";
 import SplideContentOver from "../components/splideContentOver";
 import CtaBanner from "../components/ctaBanner";
 import ListPosts from "./app/listPosts";
+import CSSCarousal from "../components/cssCarousal";
 
 const Home = () => {
   return (
@@ -37,6 +38,7 @@ const Home = () => {
       </Head>
       <Navbar />
       <Banner1 />
+      {/* <CSSCarousal /> */}
       <hr />
       <div name="history" className="pt-12">
         <SectionTitle pretitle="History" title="Through Time"></SectionTitle>
@@ -59,44 +61,20 @@ const Home = () => {
         </SectionTitle>
         <ListPosts />
       </div>
-      {/* <SectionTitle pretitle="Nextly Benefits" title=" Why should you use this landing page">
-        Nextly is a free landing page & marketing website template for startups and indie projects. Its built with
-        Next.js & TailwindCSS. And its completely open-source.
-      </SectionTitle>
-      <Benefits data={benefitOne} />
-      <Benefits imgPos="right" data={benefitTwo} />
-      <SectionTitle pretitle="Watch a video" title="Learn how to fullfil your needs">
-        This section is to highlight a promo or demo video of your product. Analysts says a landing page with video has
-        3% more conversion rate. So, don&apos;t forget to add one. Just like this.
-      </SectionTitle>
-      <Video />
-      <SectionTitle pretitle="Testimonials" title="Here's what our customers said">
-        Testimonails is a great way to increase the brand trust and awareness. Use this section to highlight your
-        popular customers.
-      </SectionTitle>
-      <Testimonials /> */}
-      {/* <SectionTitle pretitle="FAQ" title="Frequently Asked Questions">
-        Answer your customers possible questions here, it will increase the conversion rate as well as support or chat
-        requests.
-      </SectionTitle>
-      <Faq /> */}
-      <div name="contact" className="pt-12 h-screen">
+      <div name="contact" className="pt-12 h-max">
         <SectionTitle pretitle="Contact Us" title=" ">
           Learn about the club & community
         </SectionTitle>
         <Contact />
       </div>
-      <div className="w-full h-40  space-y-12"></div>
-      <Cta />
+      <div className="w-full   mt-12">
+        <Cta />
+      </div>
 
-      {/* <SplideContent />
-      <SplideContentOver />
-    <SplideContentCarousal /> */}
-      <div className="w-full h-40  space-y-24"></div>
-      <CtaBanner />
+      <div className="w-full   mt-24">
+        <CtaBanner />
+      </div>
       <Footer />
-      {/* <PopupWidget /> */}
-      {/* </> */}
     </div>
   );
 };
