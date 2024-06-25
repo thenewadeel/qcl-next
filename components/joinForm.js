@@ -146,7 +146,7 @@ const Join = (props) => {
               </div>
               <div className="!mt-10">
                 <button
-                  type="button"
+                  type="submit"
                   className="w-full py-3 px-4 text-sm  text-white  hover:bg-gray-800 focus:outline-none
                   p-2 mt-3 text-center rounded-md shadow-md bg-red-800  dark:shadow-none hover:shadow-none dark:hover:shadow-md shadow-gray-950 dark:hover:shadow-slate-500 dark:shadow-sky-200 dark:bg-red-900 dark:text-gray-200 font-bold transition-all duration-500 lg:ml-5"
                 >
