@@ -17,7 +17,7 @@ const Contact2 = (props) => {
               Have a specific inquiry or looking to explore new opportunities? Our experienced team is ready to engage
               with you.
             </p>
-            <form className="font-[sans-serif] text-[#333] max-w-4xl mx-auto px-6 my-6" netlify="true">
+            <form className="font-[sans-serif] text-[#333] max-w-4xl mx-auto px-6 my-6" netlify>
               <div className="grid sm:grid-cols-2 gap-10">
                 <div className="relative flex items-center">
                   <label className="text-[13px] absolute top-[-10px] left-0 font-semibold">First Name</label>

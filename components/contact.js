@@ -17,7 +17,7 @@ const Contact = (props) => {
               Have a specific inquiry or looking to explore new opportunities? Our experienced team is ready to engage
               with you.
             </p>
-            <form netlify="true" name="contactForm">
+            <form netlify name="contactForm">
               <div className="space-y-4 mt-8 ">
                 <input
                   type="text"

@@ -37,7 +37,7 @@ const Join = (props) => {
                 </ul>
               </div>
             </div>
-            <form className="md:col-span-2 w-full py-6 px-6 sm:px-16" netlify="true" name="joinForm">
+            <form className="md:col-span-2 w-full py-6 px-6 sm:px-16" netlify name="joinForm">
               <div className="mb-6">
                 <h3 className="text-2xl font-bold">Register for Membership</h3>
               </div>
